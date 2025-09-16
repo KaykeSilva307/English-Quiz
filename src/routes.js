@@ -1,4 +1,4 @@
-import { Route, BrowserRouter, Routes } from "react-router-dom";
+import { Route, Routes, BrowserRouter } from "react-router-dom";
 
 import Home from "./Pages/Home";
 import Criadores from "./Pages/Criadores";
@@ -11,7 +11,7 @@ import Header from "./Componentes/Header";
 
 function RotasApp(){
     return(
-        <BrowserRouter>
+        <BrowserRouter basename="/English-Quiz">
             <Header/>
             <Routes>
                 <Route path="/" element={ <Home/>}/>
