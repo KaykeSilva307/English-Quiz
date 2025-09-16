@@ -1,9 +1,91 @@
 
-
-h1{
-    width: 100%;
-
+ul{
     display: flex;
-
+    align-items: center;
     justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+
+    padding-bottom: 700px;
+    
 }
+
+ul li{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    width: 100%;
+    padding: 0 5%;
+}
+
+.startquiz-btn{
+    display: flex;
+    justify-content: center;
+    
+    border: 1px solid #000;
+    width: 15%;
+    border-radius: 50px;
+
+    background-color: #9f4cee;
+    color: #FFF;
+    font-size: 20px;
+    padding: 20px;
+}
+
+.gramatica-btn{
+    display: flex;
+    justify-content: center;
+    
+    border: 1px solid #000;
+    width: 13%;
+    border-radius: 50px;
+    padding: 20px;
+}
+
+.criadores-btn{
+    display: flex;
+    justify-content: center;
+    
+    border: 1px solid #000;
+    width: 10%;
+    border-radius: 50px;
+    padding: 20px;
+}
+
+.tentativa-btn{
+    display: flex;
+    justify-content: center;
+
+    border: 1px solid #000;
+    width: 8%;
+    border-radius: 50px;
+    padding: 20px;
+}
+
+button{
+    cursor: pointer;
+}
+
+.bemvindoSection{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    padding-top: 20px;
+    line-height: 25px;
+}
+
+.bemvindoText{
+    padding-bottom: 10px;
+
+}
+
+/* @media(max-width: 500px){
+    ul li{
+        padding: 0;
+    }
+
+    .startquiz-btn{
+        width: 30%;
+    }
+} */
