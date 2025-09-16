@@ -128,9 +128,15 @@ ul li{
         word-wrap: break-word; 
         overflow-wrap: break-word; 
         text-align: center;
-
+    }
+    bottom{
+        -webkit-appearance: none; 
+        -moz-appearance: none;   
+        appearance: none;         
+        outline: none;
     }
     ul{
+
         padding-bottom: 500px;
     }
 
