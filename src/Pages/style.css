@@ -9,6 +9,10 @@ ul{
     padding-bottom: 700px;
     
 }
+button {
+  background: none;    
+  border: none;        
+}
 
 ul li{
     display: flex;
@@ -18,6 +22,10 @@ ul li{
     padding: 0 5%;
 }
 
+.text-btn{
+    color: #FFF;
+    font-size: 20px;
+}
 .startquiz-btn{
     display: flex;
     justify-content: center;
@@ -27,9 +35,8 @@ ul li{
     border-radius: 50px;
 
     background-color: #9f4cee;
-    color: #FFF;
-    font-size: 20px;
     padding: 20px;
+    text-decoration: none;
 }
 
 .gramatica-btn{
@@ -40,16 +47,8 @@ ul li{
     width: 13%;
     border-radius: 50px;
     padding: 20px;
-}
-
-.criadores-btn{
-    display: flex;
-    justify-content: center;
-    
-    border: 1px solid #000;
-    width: 10%;
-    border-radius: 50px;
-    padding: 20px;
+    background-color: #a04cee81;
+    text-decoration: none;
 }
 
 .tentativa-btn{
@@ -57,10 +56,26 @@ ul li{
     justify-content: center;
 
     border: 1px solid #000;
+    width: 10%;
+    border-radius: 50px;
+    padding: 20px;
+    background-color: #a04cee81;
+    text-decoration: none;
+}
+
+.criadores-btn{
+    display: flex;
+    justify-content: center;
+    
+    border: 1px solid #000;
     width: 8%;
     border-radius: 50px;
     padding: 20px;
+    background-color: #a04cee81;
+    text-decoration: none;
 }
+
+
 
 button{
     cursor: pointer;

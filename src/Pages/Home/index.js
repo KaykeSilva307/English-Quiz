@@ -1,4 +1,4 @@
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import '../style.css'
 
 function Home() {
@@ -12,10 +12,11 @@ function Home() {
 
       <div>
         <ul>
-          <li><button className="startquiz-btn">Start Quiz</button></li>
-          <li><button className="gramatica-btn">Gramática</button></li>
-          <li><button className="criadores-btn">Criadores</button></li>
-          <li><button className="tentativa-btn">Tentativa</button></li>
+          <li><Link to='/quiz' className="startquiz-btn" ><button className="text-btn">Start Quiz</button></Link></li>
+          <li><Link to='/gramatica' className="gramatica-btn"><button>Gramática</button></Link></li>
+          <li><Link to='/tentativa' className="tentativa-btn"><button>Tentativa</button></Link></li>
+          <li><Link to='/criadores' className="criadores-btn"><button>Criadores</button></Link></li>
+          
         </ul>
       </div>
     </>
