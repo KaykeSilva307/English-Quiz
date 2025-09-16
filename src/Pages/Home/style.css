@@ -11,15 +11,17 @@ ul{
 }
 button {
   background: none;    
-  border: none;        
+  border: none;
+  cursor: pointer;
 }
 
 ul li{
     display: flex;
     justify-content: center;
-    margin-top: 10px;
+    
+    
     width: 100%;
-    padding: 0 5%;
+    
 }
 
 .text-btn{
@@ -37,6 +39,11 @@ ul li{
     background-color: #9f4cee;
     padding: 20px;
     text-decoration: none;
+
+    margin-bottom: 10px;
+    box-shadow: 0 5px 5px rgba(0,0,0,0.3);
+
+    
 }
 
 .gramatica-btn{
@@ -49,6 +56,9 @@ ul li{
     padding: 20px;
     background-color: #a04cee81;
     text-decoration: none;
+
+    margin-bottom: 10px;
+    box-shadow: 0 5px 5px rgba(0,0,0,0.3);
 }
 
 .tentativa-btn{
@@ -61,6 +71,9 @@ ul li{
     padding: 20px;
     background-color: #a04cee81;
     text-decoration: none;
+
+    margin-bottom: 10px;
+    box-shadow: 0 5px 5px rgba(0,0,0,0.3);
 }
 
 .criadores-btn{
@@ -73,13 +86,15 @@ ul li{
     padding: 20px;
     background-color: #a04cee81;
     text-decoration: none;
+
+    margin-bottom: 10px;
+    box-shadow: 0 5px 5px rgba(0,0,0,0.3);
 }
 
 
 
-button{
-    cursor: pointer;
-}
+
+
 
 .bemvindoSection{
     display: flex;
@@ -95,7 +110,7 @@ button{
 
 }
 
-/* @media(max-width: 500px){
+@media(max-width: 1270px){
     ul li{
         padding: 0;
     }
@@ -103,4 +118,4 @@ button{
     .startquiz-btn{
         width: 30%;
     }
-} */
+}
