@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/EnglishQuiz/static/css/main.4a9a4010.css",
+    "main.js": "/EnglishQuiz/static/js/main.7bef1d41.js",
+    "index.html": "/EnglishQuiz/index.html",
+    "main.4a9a4010.css.map": "/EnglishQuiz/static/css/main.4a9a4010.css.map",
+    "main.7bef1d41.js.map": "/EnglishQuiz/static/js/main.7bef1d41.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4a9a4010.css",
+    "static/js/main.7bef1d41.js"
+  ]
+}
