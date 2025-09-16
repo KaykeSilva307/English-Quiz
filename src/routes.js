@@ -1,5 +1,4 @@
-import { Route, Routes, BrowserRouter } from "react-router-dom";
-
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from "./Pages/Home";
 import Criadores from "./Pages/Criadores";
 import Gramatica from "./Pages/Gramatica";
@@ -12,7 +11,7 @@ import Header from "./Componentes/Header";
 
 function RotasApp(){
     return(
-        <BrowserRouter basename="/English-Quiz">
+        <Router>
             <Header/>
             <Routes>
                 <Route path="/" element={ <Home/>}/>
@@ -24,7 +23,7 @@ function RotasApp(){
                 <Route path="*" element={ <Error/> }/>
             </Routes>
         
-        </BrowserRouter>
+        </Router>
     )
 }
 

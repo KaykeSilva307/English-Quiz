@@ -6,8 +6,7 @@ function Home() {
     <>
       <div className='bemvindoSection'>
         <h2 className='bemvindoText'>Seja bem-vindo</h2>
-        <p>Desenvolvemos esse quiz para avaliar seu nível de conhecimento no inglês <br/></p>
-        <p>com diversas perguntar sobre Simple Present, Simple Past, Present Continuous e Simple Future.</p>
+        <p>Desenvolvemos esse quiz para avaliar seu nível de conhecimento no inglês com diversas perguntar sobre Simple Present, Simple Past, Present Continuous e Simple Future.<br/></p>
       </div>
 
       <div>

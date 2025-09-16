@@ -1,4 +1,12 @@
+p {
+        width: 90%;      /* ocupa 90% do container */
+        max-width: 800px; /* limita o tamanho máximo em telas grandes */
+        margin: 0 auto;  /* centraliza */
+        word-wrap: break-word; /* força quebra de palavra longa */
+        overflow-wrap: break-word; /* para navegadores modernos */
+        text-align: center;
 
+    }
 ul{
     display: flex;
     align-items: center;
@@ -23,10 +31,23 @@ ul li{
     width: 100%;
     
 }
+.bemvindoSection{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    padding-top: 20px;
+    line-height: 25px;
+}
+.bemvindoText{
+    padding-bottom: 10px;
+}
+
 
 .text-btn{
     color: #FFF;
     font-size: 20px;
+    text-shadow: 2px 2px rgba(0,0,0,0.5);
 }
 .startquiz-btn{
     display: flex;
@@ -95,27 +116,41 @@ ul li{
 
 
 
+@media(max-width: 430px){
+    p {
+        width: 90%;      /* ocupa 90% do container */
+        max-width: 800px; /* limita o tamanho máximo em telas grandes */
+        margin: 0 auto;  /* centraliza */
+        word-wrap: break-word; /* força quebra de palavra longa */
+        overflow-wrap: break-word; /* para navegadores modernos */
+        text-align: center;
 
-.bemvindoSection{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    width: 100%;
-    padding-top: 20px;
-    line-height: 25px;
-}
+    }
+    ul{
+        padding-bottom: 500px;
+    }
 
-.bemvindoText{
-    padding-bottom: 10px;
-
-}
-
-@media(max-width: 1270px){
     ul li{
         padding: 0;
     }
+    .bemvindoSection{
+        width: calc(100% - 40px); /* 20px de cada lado */
+        margin: 0 20px;
+        flex-direction: column;
+    }
 
     .startquiz-btn{
+        width: 50%;
+        margin-top: 20px;
+    }
+    .gramatica-btn{
+        width: 45%;
+    }
+    .tentativa-btn{
+        width: 42%;
+    }
+
+    .criadores-btn{
         width: 30%;
     }
 }
