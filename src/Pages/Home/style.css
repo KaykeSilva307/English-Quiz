@@ -1,9 +1,9 @@
 p {
-        width: 90%;      /* ocupa 90% do container */
-        max-width: 800px; /* limita o tamanho máximo em telas grandes */
-        margin: 0 auto;  /* centraliza */
-        word-wrap: break-word; /* força quebra de palavra longa */
-        overflow-wrap: break-word; /* para navegadores modernos */
+        width: 90%;     
+        max-width: 800px; 
+        margin: 0 auto; 
+        word-wrap: break-word; 
+        overflow-wrap: break-word; 
         text-align: center;
 
     }
@@ -18,9 +18,13 @@ ul{
     
 }
 button {
-  background: none;    
-  border: none;
-  cursor: pointer;
+    background: none;    
+    border: none;
+    cursor: pointer;
+    -webkit-appearance: none; 
+    -moz-appearance: none;   
+    appearance: none;         
+    outline: none;   
 }
 
 ul li{
@@ -118,11 +122,11 @@ ul li{
 
 @media(max-width: 430px){
     p {
-        width: 90%;      /* ocupa 90% do container */
-        max-width: 800px; /* limita o tamanho máximo em telas grandes */
-        margin: 0 auto;  /* centraliza */
-        word-wrap: break-word; /* força quebra de palavra longa */
-        overflow-wrap: break-word; /* para navegadores modernos */
+        width: 90%;     
+        max-width: 800px; 
+        margin: 0 auto;  
+        word-wrap: break-word; 
+        overflow-wrap: break-word; 
         text-align: center;
 
     }
@@ -134,7 +138,7 @@ ul li{
         padding: 0;
     }
     .bemvindoSection{
-        width: calc(100% - 40px); /* 20px de cada lado */
+        width: calc(100% - 40px); 
         margin: 0 20px;
         flex-direction: column;
     }
