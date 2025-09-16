@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/English-Quiz/static/css/main.ab5b1d04.css",
+    "main.css": "/English-Quiz/static/css/main.72e3655e.css",
     "main.js": "/English-Quiz/static/js/main.e9480b7d.js",
     "index.html": "/English-Quiz/index.html",
-    "main.ab5b1d04.css.map": "/English-Quiz/static/css/main.ab5b1d04.css.map",
+    "main.72e3655e.css.map": "/English-Quiz/static/css/main.72e3655e.css.map",
     "main.e9480b7d.js.map": "/English-Quiz/static/js/main.e9480b7d.js.map"
   },
   "entrypoints": [
-    "static/css/main.ab5b1d04.css",
+    "static/css/main.72e3655e.css",
     "static/js/main.e9480b7d.js"
   ]
 }
