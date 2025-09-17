@@ -150,6 +150,10 @@ ul li{
         flex-direction: column;
     }
 
+    .sectext-btn{
+        font-size: 15px;
+    }
+
     .startquiz-btn{
         width: 50%;
         margin-top: 20px;
