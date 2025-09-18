@@ -1,22 +1,25 @@
-html, body {
-  overflow: hidden; /* remove o scroll da página inteira */
-  height: 100%;     /* garante que o body ocupe toda a altura */
+html,
+body {
+    overflow: hidden;
+    /* remove o scroll da página inteira */
+    height: 100%;
+    /* garante que o body ocupe toda a altura */
 }
 
-.boasvindas{
+.boasvindas {
     line-height: 25px;
     padding-top: 20px;
     font-weight: bold;
     font-size: 18px;
 }
 
-.container{
+.container {
     display: flex;
     flex-direction: column;
     height: 100vh;
 }
 
-.tempoVerbal1{
+.botoes-container {
     display: flex;
     justify-content: center;
 
@@ -24,9 +27,10 @@ html, body {
     gap: 5%;
 
     margin: 30px 0 30px;
-    flex: 0 0 auto; 
+    flex: 0 0 auto;
 }
-.simplePast-btn{
+
+.simplePast-btn {
     font-size: 25px;
     background-color: #ff000081;
     padding: 1.5%;
@@ -34,53 +38,59 @@ html, body {
     border-radius: 50px;
 
 }
-.presentContinuous-btn{
+
+.presentContinuous-btn {
     font-size: 25px;
     background-color: #eeff0081;
     padding: 1.5%;
     border: 1px solid #000;
     border-radius: 50px;
- 
+
 }
-.simplePresent-btn{
+
+.simplePresent-btn {
     font-size: 25px;
     background-color: #15ff0081;
     padding: 1.5%;
     border: 1px solid #000;
     border-radius: 50px;
 
-    
+
 }
-.simpleFuture-btn{
+
+.simpleFuture-btn {
     font-size: 25px;
     background-color: #0011ff81;
     padding: 1.5%;
     border: 1px solid #000;
     border-radius: 50px;
 
-    
+
 }
 
-.tempoVerbal{
+.tempoVerbal {
     display: flex;
     justify-content: center;
     align-items: center;
+
     font-size: 20px;
+
+    margin-top: 2%;
 }
 
-.divPrincipal{
+.divPrincipal {
     display: flex;
     justify-content: center;
     align-items: center;
 
     font-size: 20px;
     padding: 2%;
-    border: 1px solid;
     height: 50%;
     margin: 0 20%;
+
 }
 
-.subDivs{
+.subDivs {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -88,21 +98,28 @@ html, body {
     text-align: center;
     border: 1px solid;
     height: 100%;
+    width: 100%;
+
+
 }
-.coluna{
+
+.coluna {
     display: flex;
     border: 1px solid;
     width: 100%;
     height: 100%;
     flex: 1;
     flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.205);
 }
 
-.titulo{
+.titulo {
     margin-top: 10%;
+    font-weight: bold;
+    font-size: 25px;
 }
 
-.explicacao{
+.explicacao {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -110,5 +127,152 @@ html, body {
 
     padding-top: 20%;
     line-height: 30px;
-    color: blue;
+    color: black;
+}
+
+/* Mobile pequeno */
+@media (max-width: 480px) {
+    body {
+        height: 100vh;
+        overflow: auto;
+    }
+
+    .boasvindas {
+        font-size: 80%;
+        max-height: 50%;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        max-width: auto;
+    }
+
+    .botoes-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin: 4% auto;
+        padding: 0 10%;
+    }
+
+    .simplePast-btn,
+    .presentContinuous-btn,
+    .simplePresent-btn,
+    .simpleFuture-btn {
+        flex: 1 1 calc(50% - 40px);
+        box-sizing: border-box;
+        font-size: 10px;
+        padding: 6% 3%;
+        font-weight: bold;
+    }
+
+    .divPrincipal {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 320px;
+        max-height: 400px;
+        margin: 0 50px;
+        border: none;
+    }
+
+    .subDivs {
+        display: flex;
+        flex-wrap: wrap;
+        flex: 1;
+        border: none;
+        height: 400px;
+    }
+
+    .coluna {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex: 1;
+        position: relative;
+        margin: 3%;
+    }
+
+    .titulo {
+        position: absolute;
+        top: 20px;
+        display: flex;
+        font-size: 20px;
+        margin-bottom: 50px;
+        margin-top: 0;
+    }
+
+    .explicacao {
+        margin: 30px;
+        font-size: 15px;
+        text-align: center;
+        line-height: 20px;
+
+    }
+
+}
+
+/* Mobile médio / grande */
+@media (min-width: 576px) {
+    .botoes-container {
+        padding: 0 8%;
+    }
+
+    .divPrincipal {
+        margin: 0 3%;
+    }
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+    .container {
+        margin-top: 10px;
+    }
+    .explicacao{
+        font-size: 20px;
+    }
+}
+
+/* Notebook médio / desktop */
+@media (min-width: 1024px) {
+
+    .explicacao {
+        padding: 0;
+    }
+
+    .titulo {
+        margin: 10px;
+    }
+
+    .explicacao {
+        margin-top: 10px;
+        text-align: center;
+        line-height: 20px;
+
+    }
+}
+
+/* Desktop grande */
+@media (min-width: 1600px) {
+    .divPrincipal {
+        margin: 0 10%;
+    }
+
+    .explicacao {
+        padding: 0;
+    }
+
+    .titulo {
+        font-size: 25px;
+        font-weight: bold;
+        margin: 10px;
+    }
+
+    .explicacao {
+        margin: 20px;
+        text-align: center;
+        line-height: 25px;
+        font-size: 23px;
+
+    }
 }

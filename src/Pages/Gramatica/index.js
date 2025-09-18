@@ -17,16 +17,21 @@ function Gramatica() {
         {
           titulo: "Formação",
           explicacao: [
-            "Afirmativo: She works every day.",
-            "Negativo: She does not (doesn't) work every day.",
-            "Interrogativo: Does she work every day?"
+            "Afirmativa: sujeito + verbo (base) + complemento",
+            "Negativa: sujeito + do/does + not + verbo (base) + complemento",
+            "Interrogativa: do/does + sujeito + verbo (base) + complemento?"
           ]
         },
         {
           titulo: "Exemplos",
           explicacao: [
-            "Ex.: I go to school every day.",
-            "Ex.: He drinks coffee in the morning."
+            " I drink water",
+            " You watch TV",
+            " He reads a book",
+            " She cooks dinner",
+            " It sleeps on the bed",
+            " We play chess",
+            " They study English"
           ]
         }
       ]
@@ -41,16 +46,21 @@ function Gramatica() {
         {
           titulo: "Formação",
           explicacao: [
-            "Afirmativo: They visited Paris in 2019.",
-            "Negativo: They did not (didn't) visit Paris in 2019.",
-            "Interrogativo: Did they visit Paris in 2019?"
+            "Afirmativa: sujeito + verbo (passado) + complemento",
+            "Negativa: sujeito + did + not + verbo (base) + complemento",
+            "Interrogativa: did + sujeito + verbo (base) + complemento?"
           ]
         },
         {
           titulo: "Exemplos",
           explicacao: [
-            "Ex.: She played tennis yesterday.",
-            "Ex.: We watched a movie last night."
+            "I visited my friend",
+            "You watched a movie",
+            "He cleaned the room",
+            "She cooked pasta",
+            "It rained yesterday",
+            "We played cards",
+            "They studied history"
           ]
         }
       ]
@@ -65,16 +75,21 @@ function Gramatica() {
         {
           titulo: "Formação",
           explicacao: [
-            "Afirmativo: I will call you tomorrow.",
-            "Negativo: I will not (won't) call you tomorrow.",
-            "Interrogativo: Will I call you tomorrow?"
+            "Afirmativa: sujeito + will + verbo (base) + complemento",
+            "Negativa: sujeito + will + not + verbo (base) + complemento",
+            "Interrogativa: will + sujeito + verbo (base) + complemento?"
           ]
         },
         {
           titulo: "Exemplos",
           explicacao: [
-            "Ex.: They will travel next week.",
-            "Ex.: She will start her new job soon."
+            "I will travel tomorrow",
+            "You will call me later",
+            "He will buy a new phone",
+            "She will cook lunch",
+            "It will be sunny",
+            "We will play basketball",
+            "They will study for the test"
           ]
         }
       ]
@@ -89,16 +104,21 @@ function Gramatica() {
         {
           titulo: "Formação",
           explicacao: [
-            "Afirmativo: She is studying at the moment.",
-            "Negativo: She is not (isn't) studying at the moment.",
-            "Interrogativo: Is she studying at the moment?"
+            "Afirmativa: sujeito + am/is/are + verbo(-ing) + complemento",
+            "Negativa: sujeito + am/is/are + not + verbo(-ing) + complemento",
+            "Interrogativa: am/is/are + sujeito + verbo(-ing) + complemento?"
           ]
         },
         {
           titulo: "Exemplos",
           explicacao: [
-            "Ex.: I am reading a book right now.",
-            "Ex.: They are playing football in the park."
+            "I am drinking tea",
+            "You are watching a series",
+            "He is reading a newspaper",
+            "She is cooking soup",
+            "It is sleeping now",
+            "We are playing soccer",
+            "They are studying math"
           ]
         }
       ]
@@ -115,7 +135,7 @@ function Gramatica() {
 
       <div className="container">
         {/* Div com os botões */}
-        <div className="tempoVerbal1">
+        <div className="botoes-container">
           <button
             className='simplePast-btn'
             onClick={() => setTempoSelecionado("passado")}
@@ -154,7 +174,7 @@ function Gramatica() {
                 <div className="titulo">{coluna.titulo}</div>
                 <div className="explicacao">
                   {Array.isArray(coluna.explicacao)
-                    ? coluna.explicacao.map((item, i) => <p key={i}>{item}</p>)
+                    ? coluna.explicacao.map((item, i) => <p style={{marginBottom: "1em"}} key={i}>{item}</p>)
                     : <p>{coluna.explicacao}</p>
                   }
                 </div>

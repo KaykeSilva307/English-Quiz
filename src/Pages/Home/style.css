@@ -31,6 +31,7 @@ ul li{
     display: flex;
     justify-content: center;
     
+    
     width: 100%;
     
 }
@@ -47,6 +48,9 @@ ul li{
 }
 .bemvindoText{
     padding-bottom: 10px;
+}
+.divBotoes{
+    padding: 0 10% 700px;
 }
 
 .text-btn{
@@ -349,7 +353,7 @@ ul li{
 }
 
 /* Desktop grande */
-@media (min-width: 1600px) {
+@media (max-width: 1600px) {
   ul li{
         display: flex;
         gap: 10px;
@@ -373,6 +377,7 @@ ul li{
         flex-direction: row;
         flex-wrap: wrap;
         height: 100%;
+
     }
 
     .startquiz-btn{
