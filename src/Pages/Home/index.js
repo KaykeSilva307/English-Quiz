@@ -10,7 +10,7 @@ function Home() {
       </div>
 
       <div>
-        <ul>
+        <ul className="divBotoes">
           <li><Link to='/quiz' className="startquiz-btn" ><button className="text-btn">Start Quiz</button></Link></li>
           <li><Link to='/gramatica' className="gramatica-btn"><button className="sectext-btn">Gramática</button></Link></li>
           <li><Link to='/tentativa' className="tentativa-btn"><button className="sectext-btn">Tentativa</button></Link></li>

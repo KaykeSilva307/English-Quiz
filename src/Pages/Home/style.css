@@ -31,10 +31,10 @@ ul li{
     display: flex;
     justify-content: center;
     
-    
     width: 100%;
     
 }
+
 
 
 .bemvindoSection{
@@ -53,10 +53,12 @@ ul li{
     color: #FFF;
     font-size: 20px;
     text-shadow: 2px 2px rgba(0,0,0,0.5);
+    font-weight: bold;
 }
 
 .sectext-btn{
     color: #000;
+    font-weight: bold;
 }
 .startquiz-btn{
     display: flex;
@@ -120,51 +122,270 @@ ul li{
 }
 
 
-
-
-
-@media(max-width: 430px){
-    p {
-        width: 90%;     
-        max-width: 800px; 
-        margin: 0 auto;  
-        word-wrap: break-word; 
-        overflow-wrap: break-word; 
-        text-align: center;
-    }
-    bottom{
-        -webkit-appearance: none; 
-        -moz-appearance: none;   
-        appearance: none;         
-        outline: none;
-    }
-    ul{
-
-        padding-bottom: 500px;
-    }
+/* Mobile pequeno */
+@media (max-width: 480px) {
 
     ul li{
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
         padding: 0;
     }
     .bemvindoSection{
         width: calc(100% - 40px); 
         margin: 0 20px;
         flex-direction: column;
+        font-size: 15px;
+        line-height: 20px;
+    }
+
+    .sectext-btn{
+        font-size: 15px;
+        
+    }
+    .divBotoes{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+    }
+
+    .startquiz-btn{
+        display: flex;
+        width: 50%;
+        margin-top: 20px;
+
+        
+    }
+    .gramatica-btn{
+        width: 40%;
+    }
+    .tentativa-btn{
+        width: 35%;
+    }
+
+    .criadores-btn{
+        width: 30%;
+    }
+}
+
+/* Mobile médio / grande */
+@media (min-width: 576px) {
+  ul li{
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        padding: 0;
+    }
+    .bemvindoSection{
+        width: calc(100% - 40px); 
+        margin: 0 20px;
+        flex-direction: column;
+        font-size: 15px;
+        line-height: 20px;
+    }
+
+    .sectext-btn{
+        font-size: 15px;
+        
+    }
+    .divBotoes{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+    }
+
+    .startquiz-btn{
+        display: flex;
+        width: 50%;
+        margin-top: 20px;
+        
+    }
+    .gramatica-btn{
+        width: 40%;
+    }
+    .tentativa-btn{
+        width: 35%;
+    }
+
+    .criadores-btn{
+        width: 30%;
+    }
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+    .divBotoes{
+        margin-top: 30px;
+    }
+    .bemvindoSection{
+        width: calc(100% - 40px); 
+        margin: 0 20px;
+        flex-direction: column;
+        font-size: 15px;
+        line-height: 20px;
+  }
+
+    .sectext-btn{
+        font-size: 15px;
+        
+    }
+    .divBotoes{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        height: 100%;
+    }
+
+    .startquiz-btn{
+        display: flex;
+        width: 40%;
+        margin-top: 20px;
+        
+    }
+    .gramatica-btn{
+        width: 30%;
+    }
+    .tentativa-btn{
+        width: 25%;
+    }
+
+    .criadores-btn{
+        width: 20%;
+    }
+}
+
+/* Notebook pequeno ou tables */
+@media (min-width: 992px) {
+  ul li{
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0;
+    }
+    .bemvindoSection{
+        width: calc(100% - 40px); 
+        margin: 0 20px;
+        flex-direction: column;
+        font-size: 15px;
+        line-height: 20px;
     }
 
     .sectext-btn{
         font-size: 15px;
     }
+    .divBotoes{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        height: 100%;
+    }
 
     .startquiz-btn{
+        display: flex;
         width: 50%;
         margin-top: 20px;
+
     }
     .gramatica-btn{
-        width: 45%;
+        width: 40%;
     }
     .tentativa-btn{
-        width: 42%;
+        width: 35%;
+    }
+
+    .criadores-btn{
+        width: 30%;
+    }
+}
+
+/* Notebook médio / desktop */
+@media (min-width: 1200px) {
+  ul li{
+        display: flex;
+        
+        gap: 10px;
+        width: 100%; 
+        
+    }
+    .bemvindoSection{
+        margin: 0 20px;
+        font-size: 15px;
+        line-height: 20px;
+    }
+
+    .sectext-btn{
+        font-size: 15px;
+    }
+    .divBotoes{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin: 20px 20%;
+        height: 100%;
+        
+    }
+
+    .startquiz-btn{
+        display: flex;
+        width: 50%;
+        margin-bottom: 10px;
+        
+    }
+    .gramatica-btn{
+        width: 40%;
+        margin-bottom: 10px;
+    }
+    .tentativa-btn{
+        width: 35%;
+        margin-bottom: 10px;
+    }
+
+    .criadores-btn{
+        width: 30%;
+        margin-bottom: 10px;
+    }
+}
+
+/* Desktop grande */
+@media (min-width: 1600px) {
+  ul li{
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        padding: 0;
+    }
+    .bemvindoSection{
+        width: calc(100% - 40px); 
+        margin: 0 20px;
+        flex-direction: column;
+        font-size: 15px;
+        line-height: 20px;
+    }
+
+    .sectext-btn{
+        font-size: 15px;
+        
+    }
+    .divBotoes{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        height: 100%;
+    }
+
+    .startquiz-btn{
+        display: flex;
+        width: 50%;
+        margin-top: 20px;
+
+    }
+    .gramatica-btn{
+        width: 40%;
+    }
+    .tentativa-btn{
+        width: 35%;
     }
 
     .criadores-btn{
