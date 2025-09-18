@@ -1,7 +1,7 @@
 .quiz-container{
     height: 100%;  
     max-height: 90vh;          /* necessário para ocupar toda a tela */
-    margin: 80px 700px;
+    margin: 5% 35%;
 
     
     display: flex;
@@ -14,7 +14,7 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    padding: 100px 30px 100px 30px;
+    padding: 20% 5% 20% 5%;
     border: 3px solid;
     border-radius: 20px;
     background-color: #f0ddff;
@@ -26,8 +26,8 @@
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    margin-top: 30px;
-    padding: 0 10px;
+    margin-top: 10%;
+    padding: 0 5%;
     
     
 }
@@ -56,6 +56,64 @@
     margin: 0 35%;
     margin-top: 8%;
 
+}
 
- 
+/* Desktop grande (até 1600px) */
+@media (max-width: 1600px) {
+
+}
+
+/* Desktop grande (até 1280px) */
+@media (max-width: 1280px) {
+  .quiz-container{
+    margin: 3% 25%;
+  }
+}
+
+/* Notebook / Tablet grande (até 1024px) */
+@media (max-width: 1024px) {
+  
+}
+
+/* Tablet (até 768px) */
+@media (max-width: 768px) {
+
+}
+
+/* Mobile grande (até 576px) */
+@media (max-width: 576px) {
+    .quiz-container{
+        margin: 5% 15%;
+    }
+    .pergunta{
+        border: 2px solid;
+    }
+}
+
+/* Mobile médio (até 480px) */
+@media (max-width: 480px) {
+  .pergunta{
+    border: 1px solid;
+  }
+}
+
+/* Mobile pequeno (até 320px) */
+@media (max-width: 320px) {
+    .quiz-container{
+        margin: 2% 10%;
+    }
+    .resposta{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        padding: 0;
+        padding-right: 10px;
+        width: 100%;
+        gap: 10%;
+    }
+    .opcoes{
+        padding: 10% 20%;
+        gap: 0;
+    }
 }
