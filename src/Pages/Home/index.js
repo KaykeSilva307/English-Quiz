@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import './style.css'
+import './home.css'
 
 function Home() {
   return (
@@ -13,7 +13,7 @@ function Home() {
         <ul className="divBotoes">
           <li><Link to='/quiz' className="startquiz-btn" ><button className="text-btn">Start Quiz</button></Link></li>
           <li><Link to='/gramatica' className="gramatica-btn"><button className="sectext-btn">Gramática</button></Link></li>
-          <li><Link to='/tentativa' className="tentativa-btn"><button className="sectext-btn">Tentativa</button></Link></li>
+          <li><Link to='/tentativas' className="tentativa-btn"><button className="sectext-btn">Tentativa</button></Link></li>
           <li><Link to='/criadores' className="criadores-btn"><button className="sectext-btn">Criadores</button></Link></li>
           
         </ul>

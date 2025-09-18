@@ -1,3 +1,4 @@
+
 html,
 body {
     overflow: hidden;
@@ -37,6 +38,7 @@ body {
     border: 1px solid #000;
     border-radius: 50px;
     color: #000;
+    box-shadow: 0 5px 5px rgba(0,0,0,0.3);
 
 }
 
@@ -47,6 +49,7 @@ body {
     border: 1px solid #000;
     border-radius: 50px;
     color: #000;
+    box-shadow: 0 5px 5px rgba(0,0,0,0.3);
 }
 
 .simplePresent-btn {
@@ -56,8 +59,10 @@ body {
     border: 1px solid #000;
     border-radius: 50px;
     color: #000;
+    box-shadow: 0 5px 5px rgba(0,0,0,0.3);
 
 }
+
 
 .simpleFuture-btn {
     font-size: 25px;
@@ -66,7 +71,7 @@ body {
     border: 1px solid #000;
     border-radius: 50px;
     color: #000;
-
+    box-shadow: 0 5px 5px rgba(0,0,0,0.3);
 }
 
 .tempoVerbal {
@@ -104,8 +109,6 @@ body {
     border: 1px solid;
     height: 100%;
     width: 100%;
-
-
 }
 
 .coluna {
@@ -116,6 +119,8 @@ body {
     flex: 1;
     flex-direction: column;
     background-color: rgba(0, 0, 0, 0.205);
+    transition: transform 0.1s ease-in-out;
+    box-shadow: 0 5px 5px rgba(0,0,0,0.3);
 }
 
 .titulo {

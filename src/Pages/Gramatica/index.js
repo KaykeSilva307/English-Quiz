@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./style.css"; // caso você esteja usando CSS separado
+import "./gramatica.css"; // caso você esteja usando CSS separado
 
 function Gramatica() {
   // estado que guarda qual tempo verbal foi escolhido
@@ -12,7 +12,7 @@ function Gramatica() {
       colunas: [
         {
           titulo: "Uso",
-          explicacao: "Usado para ações habituais e verdades universais."
+          explicacao: "O Simple present é usado para ações habituais e verdades universais."
         },
         {
           titulo: "Formação",
@@ -41,7 +41,7 @@ function Gramatica() {
       colunas: [
         {
           titulo: "Uso",
-          explicacao: "Usado para ações concluídas no passado."
+          explicacao: "O Simple Past é usado para ações concluídas no passado."
         },
         {
           titulo: "Formação",
@@ -70,7 +70,7 @@ function Gramatica() {
       colunas: [
         {
           titulo: "Uso",
-          explicacao: "Usado para ações que irão acontecer."
+          explicacao: "O Simple Future é usado para ações que irão acontecer."
         },
         {
           titulo: "Formação",
@@ -99,7 +99,7 @@ function Gramatica() {
       colunas: [
         {
           titulo: "Uso",
-          explicacao: "Usado para ações que estão acontecendo agora."
+          explicacao: "O Present Continuous é usado para ações que estão acontecendo agora."
         },
         {
           titulo: "Formação",
@@ -138,7 +138,8 @@ function Gramatica() {
         <div className="botoes-container">
           <button
             className='simplePast-btn'
-            onClick={() => setTempoSelecionado("passado")}
+            onClick={() => setTempoSelecionado("passado")
+            }
           >
             Simple Past
           </button>
