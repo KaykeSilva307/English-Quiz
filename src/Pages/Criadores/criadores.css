@@ -1,0 +1,188 @@
+
+.criadores-container{
+    height: 100vh;
+}
+
+.criadores{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    height: 90vh;
+    width: 100%;
+    gap: 3%;
+    max-height: 60%;
+    margin: 5% 0 5%;
+}
+img{
+    width: 200px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    border: 2px solid;
+}
+.texto{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    margin-top: 20px;
+    text-align: center;
+}
+.kayke{
+    border: 2px solid;
+    padding: 5% 2% 30%;
+    background-color: grey;
+    border-radius: 30px;
+    max-height: 100%;
+}
+.anna{
+    border: 2px solid;
+    padding: 5% 2% 30%;
+    background-color: grey;
+    border-radius: 30px;
+    max-height: 100%;
+}
+.gabriel{
+    border: 2px solid;
+    padding: 5% 2% 30%;
+    background-color: grey;
+    border-radius: 30px;
+    max-height: 100%;
+}
+.matricula{
+    margin-top: 20px;
+    font-size: 18px;
+}
+.matricula-nmr{
+    font-size: 15px;
+}
+.agradecimento{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    text-align: center;
+}
+
+
+
+/* Notebook / Tablet grande (até 1024px) */
+@media (max-width: 1024px) {
+    img{
+        width: 180px;
+    }
+    .kayke{
+        padding: 2% 1% 15%;
+    }
+    .anna{
+        padding: 2% 1% 15%;
+    }
+    .gabriel{
+        padding: 2% 1% 15%;
+    }
+    .agradecimento{
+    font-size: 12px;
+}
+}
+
+/* Tablet (até 768px) */
+@media (max-width: 768px) {
+    .texto{
+        font-size: 20px;
+        padding: 10px 50px;
+        text-align: center;
+    }
+    .agradecimento{
+        padding: 10px 50px;
+    }
+}
+
+/* Mobile grande (até 576px) */
+@media (max-width: 576px) {
+    .criadores{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 0px;
+
+    }
+    img{
+        display: block;   
+        margin: 10px auto 30px;
+        width: 150px;
+
+    }
+    .kayke{
+        padding: 2% 1% 15%;
+        flex: 1;
+    }
+    .anna{
+        padding: 2% 1% 15%;
+        flex: 1;
+    }
+    .gabriel{
+        padding: 2% 1% 15%;
+        flex: 1;
+    }
+}
+
+/* Mobile médio (até 480px) */
+@media (max-width: 480px) {
+    img{
+        margin: 15px;
+    }
+  .criadores{
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    flex-wrap: wrap;
+    padding: 0;
+    gap: 2%;
+  }
+  
+  .kayke{
+    display: flex;
+    flex-direction: row;
+    padding: 10px 5px;
+    margin: 0 10%;
+  }
+  .gabriel{
+    display: flex;
+    flex-direction: row;
+    margin: 0 10%;
+    padding: 10px 0;
+  }
+  .anna{
+    display: flex;
+    flex-direction: row;
+    padding: 10px 10px;
+    margin:0 10%;
+  }
+  .nome{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .matricula{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 0;
+    padding: 0 10px 0 50px;
+    font-size: 15px;
+  }
+  .matricula-nmr{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    padding-top: 3px;
+  }
+  .agradecimento{
+    margin-top: 30%;
+  }
+}
+
+
+

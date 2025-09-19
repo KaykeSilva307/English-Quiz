@@ -21,7 +21,7 @@ function Quiz() {
   }
 
   if(showResult) {
-    localStorage.setItem("quizScore", score);
+
     return (
       <div className="quiz-container">
         <div className="pergunta">

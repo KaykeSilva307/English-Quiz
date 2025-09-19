@@ -99,7 +99,7 @@ ul li{
     box-shadow: 0 5px 5px rgba(0,0,0,0.3);
 }
 
-.tentativa-btn{
+.criadores-btn{
     display: flex;
     justify-content: center;
 
@@ -114,20 +114,6 @@ ul li{
     box-shadow: 0 5px 5px rgba(0,0,0,0.3);
 }
 
-.criadores-btn{
-    display: flex;
-    justify-content: center;
-    
-    border: 1px solid #000;
-    width: 8%;
-    border-radius: 50px;
-    padding: 20px;
-    background-color: #a04cee81;
-    text-decoration: none;
-
-    margin-bottom: 10px;
-    box-shadow: 0 5px 5px rgba(0,0,0,0.3);
-}
 
 
 /* Mobile pequeno */
