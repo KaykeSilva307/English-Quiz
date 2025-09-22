@@ -30,8 +30,8 @@ function Gramatica() {
             " He reads a book",
             " She cooks dinner",
             " It sleeps on the bed",
-            " We play chess",
-            " They study English"
+            " We do not play chess",
+            " Do they study English ?"
           ]
         }
       ]
@@ -59,8 +59,8 @@ function Gramatica() {
             "He cleaned the room",
             "She cooked pasta",
             "It rained yesterday",
-            "We played cards",
-            "They studied history"
+            "We did not play cards",
+            "Did they study history ?"
           ]
         }
       ]
@@ -88,8 +88,8 @@ function Gramatica() {
             "He will buy a new phone",
             "She will cook lunch",
             "It will be sunny",
-            "We will play basketball",
-            "They will study for the test"
+            "We will not play basketball",
+            "Will they study for the test ?"
           ]
         }
       ]
@@ -117,8 +117,8 @@ function Gramatica() {
             "He is reading a newspaper",
             "She is cooking soup",
             "It is sleeping now",
-            "We are playing soccer",
-            "They are studying math"
+            "We are not playing soccer",
+            "Are they studying math ?"
           ]
         }
       ]
