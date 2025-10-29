@@ -128,6 +128,7 @@ function Gramatica() {
 
   return (
     <>
+    <main>
       <p className="boasvindas">
         Bem-vindo à página de Gramática, aqui você poderá ver de forma mais dinâmica cada tempo verbal,
         como eles são estruturados, exemplos e suas formas negativas, positivas e interrogativas.
@@ -175,7 +176,7 @@ function Gramatica() {
                 <div className="titulo">{coluna.titulo}</div>
                 <div className="explicacao">
                   {Array.isArray(coluna.explicacao)
-                    ? coluna.explicacao.map((item, i) => <p style={{marginBottom: "1em"}} key={i}>{item}</p>)
+                    ? coluna.explicacao.map((item, i) => <p style={{marginBottom: "0.5em"}} key={i}>{item}</p>)
                     : <p>{coluna.explicacao}</p>
                   }
                 </div>
@@ -184,6 +185,8 @@ function Gramatica() {
           </div>
         </div>
       </div>
+    </main>
+      
     </>
   );
 }

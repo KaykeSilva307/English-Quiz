@@ -9,7 +9,8 @@ export const questoes = [
   {
   question: "They ___ soccer on weekends.",
   options: ["plays", "play", "played"],
-  answer: "play"
+  answer: "play",
+  category: 'present'
   },
 
   {

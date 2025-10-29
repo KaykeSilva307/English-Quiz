@@ -1,5 +1,12 @@
+:root {
+  --cor-principal: #2f3132;
+  --cor-secundaria: #d8a15b;
+  --cor-terciaria: rgba(227, 182, 122, 0.7);
+  --cor-texto: #333;
+  --cor-fundo: #8c8e8f;
+}
 
-html,
+
 body {
     overflow: hidden;
     /* remove o scroll da página inteira */
@@ -118,7 +125,7 @@ body {
     height: 100%;
     flex: 1;
     flex-direction: column;
-    background-color: rgba(0, 0, 0, 0.205);
+    background-color: var(--cor-terciaria);
     transition: transform 0.1s ease-in-out;
     box-shadow: 0 5px 5px rgba(0,0,0,0.3);
 }

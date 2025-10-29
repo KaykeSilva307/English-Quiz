@@ -1,3 +1,10 @@
+:root {
+  --cor-principal: #2f3132;
+  --cor-secundaria: #d8a15b;
+  --cor-terciaria: rgba(227, 182, 122, 0.7);
+  --cor-texto: #333;
+  --cor-fundo: #8c8e8f;
+}
 
 .criadores-container{
     height: 100vh;
@@ -25,27 +32,27 @@ img{
     justify-content: center;
     align-items: center;
     font-size: 20px;
-    margin-top: 20px;
+    padding-top: 20px;
     text-align: center;
 }
 .kayke{
     border: 2px solid;
     padding: 5% 2% 30%;
-    background-color: grey;
+    background-color: var(--cor-terciaria);
     border-radius: 30px;
     max-height: 100%;
 }
 .anna{
     border: 2px solid;
     padding: 5% 2% 30%;
-    background-color: grey;
+    background-color: var(--cor-terciaria);
     border-radius: 30px;
     max-height: 100%;
 }
 .gabriel{
     border: 2px solid;
     padding: 5% 2% 30%;
-    background-color: grey;
+    background-color: var(--cor-terciaria);
     border-radius: 30px;
     max-height: 100%;
 }

@@ -1,10 +1,12 @@
+/*   --glass: rgba(255,255,255,0.03); /* efeito translúcido */
+
 header{
-    background-color: #9f4cee;
+    background-color: var(--cor-principal);
     width: 100%;
     padding: 0 20px;
     height: 90px;
     margin: 0;
-    color: #FFF;
+    color: var(--cor-secundaria);
     text-shadow: 2px 3px rgba(0,0,0,0.5);
     font-size: 20px;
     border-bottom: 2px solid #000;
@@ -18,7 +20,7 @@ header{
 
 header a{
     font-size: 15px;
-    color: #FFF;
+    color: var(--cor-secundaria);
     text-decoration: none;
     text-shadow: 1px 2px rgba(0,0,0,0.5);
 }

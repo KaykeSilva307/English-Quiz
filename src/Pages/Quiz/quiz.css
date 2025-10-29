@@ -1,47 +1,66 @@
-.quiz-container{
-    height: 100%;  
-    max-height: 90vh;          /* necessário para ocupar toda a tela */
-    margin: 5% 35%;
+:root {
+  --cor-principal: #2f3132;
+  --cor-secundaria: #d8a15b;
+  --cor-terciaria: rgba(227, 182, 122, 0.7);
+  --cor-texto: #333;
+  --cor-fundo: #8c8e8f;
+}
 
-    
+
+
+.quiz-container{
+    height: 100vh;          /* necessário para ocupar toda a tela */
+    margin: 0 35%;
+
     display: flex;
     justify-content: center; /* centraliza horizontalmente */
     align-items: center; 
     padding: 3%;
 }
-
-.pergunta {
+.box{
     width: 100%;
     display: flex;
     flex-direction: column;
-    padding: 20% 5% 20% 5%;
+    padding: 200px 30px 200px 30px;
     border: 3px solid;
     border-radius: 20px;
-    background-color: #f0ddff;
+    background-color: var(--cor-terciaria);
     text-align: center;
     box-shadow: 0 5px 5px rgba(0,0,0,0.3);
+}
+
+.texto {
+    
 }
 
 .resposta{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    margin-top: 10%;
-    padding: 0 5%;
-    
-    
+    justify-content: center;
+    margin-top: 10px;
+    flex-direction: column;
+
+    gap: 5px;
+    align-items: center;
+    border: #000 solid;
+    max-width: 500px;
+}
+.opcao-container{
+  padding: 0 auto;
 }
 
 .opcoes{
-    border: 1px solid #a231ff;
-    background-color: #c988ff;
+    border: 1px solid #000000;
+    background-color: var(--cor-secundaria);
     color: #000;
     font-size: 20px;
-    padding: 10px 20px;
     border-radius: 20px;
     flex: 1;
     box-shadow: 0 5px 5px rgba(0,0,0,0.3);
-    
+    display: flex;
+    flex-direction: row;
+    border: #000 solid;
+    padding: 0 100%;
 }
 
 .goBack{
@@ -66,7 +85,7 @@
 /* Desktop grande (até 1280px) */
 @media (max-width: 1280px) {
   .quiz-container{
-    margin: 3% 25%;
+    margin: 0 25%;
   }
 }
 
@@ -83,16 +102,16 @@
 /* Mobile grande (até 576px) */
 @media (max-width: 576px) {
     .quiz-container{
-        margin: 5% 15%;
+        margin: 0 15%;
     }
-    .pergunta{
+    .texto{
         border: 2px solid;
     }
 }
 
 /* Mobile médio (até 480px) */
 @media (max-width: 480px) {
-  .pergunta{
+  .texto{
     border: 1px solid;
   }
   .resposta{
@@ -105,7 +124,7 @@
 /* Mobile pequeno (até 320px) */
 @media (max-width: 320px) {
     .quiz-container{
-        margin: 2% 10%;
+        margin: 0 10%;
     }
     .resposta{
         display: flex;
