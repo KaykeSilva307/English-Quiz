@@ -14,5 +14,6 @@
 }
 
 body{
+    background-color: var(--cor-fundo);
     font-family: sans-serif;
 }

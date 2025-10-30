@@ -18,6 +18,7 @@
 main {
     background-color: var(--cor-fundo);
     height: 100vh;
+    width: 100%;
 }
 
 /* Father of divs */
@@ -25,22 +26,25 @@ main {
 section {
     display: flex;
     flex-direction: row;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     height: 400px;
     gap: 20px;
-    width: 700px;
-    margin-right: auto;
-    margin-left: auto;
 
     position: relative;
     top: 25%;
 }
 
+.coluna1,
+.coluna2 {
+    height: 100%;
+    width: 400px;
+
+}
+
 /* Left div */
 
 .divBemvindo {
-    max-width: 500px;
     border: #2f3132 solid 2px;
     background-color: var(--cor-fundo-div);
     border-radius: 20px;
@@ -48,11 +52,13 @@ section {
     flex: 1;
     height: 100%;
 
+
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    position: relative;
+
+    animation: showLeft .5s ease-out;
 }
 
 .bemvindoText {
@@ -61,6 +67,7 @@ section {
     position: relative;
     top: -25px;
     text-shadow: 0px 2px #b4b4b4;
+    width: 300px;
 }
 
 p {
@@ -70,16 +77,6 @@ p {
     flex-grow: 2;
 
 
-}
-
-.linha {
-    border-top: solid 2px #000;
-    padding: 5px;
-    transform: rotate(90deg);
-    width: 350px;
-
-    position: absolute;
-    left: 170px;
 }
 
 /* Right div */
@@ -93,85 +90,85 @@ ul {
     margin-top: 10px;
 }
 
-ul li {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-}
-
-.divBotoes {
-    max-width: 500px;
-    border: #2f3132 solid 2px;
-    background-color: var(--cor-fundo-div);
-    border-radius: 20px;
-    padding: 50px 20px;
-    flex: 1;
-    height: 100%;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    width: 340px;
-}
 
 .comeceJa {
     display: flex;
     justify-content: center;
     position: relative;
     top: -25px;
-    text-shadow: 0px 2px #b4b4b4;;
+    text-shadow: 0px 2px #b4b4b4;
 }
 
-svg {
+.divBotoes {
+    background-color: var(--cor-fundo-div);
+    border: #2f3132 solid 2px;
+    border-radius: 20px;
+    padding: 50px 20px;
+    flex: 1;
+    height: 100%;
+    width: 400px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    animation: showRight .5s ease-out;
+}
+
+.divBotoes box-icon {
     position: relative;
-    top: 4px;
-    right: 10%;
+    right: 15px;
+}
+
+.divBotoes button {
+    width: 300px;
+    height: 50px;
+    border-radius: 50px;
+    font-size: 18px;
+    font-weight: bold;
+
+    transform: translateY(0);
+    transition: transform 0.4s ease-in;
+}
+
+.divBotoes button:hover {
+    cursor: pointer;
+    transform: translateY(-2px);
+    transition: transform 0.3s ease-out;
 }
 
 .startquiz-btn {
     background-color: #d8a15b;
-    padding: 10px 70px 14px;
-    border-radius: 30px;
-    font-size: 18px;
-    font-weight: bold;
-    box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.3);
-
-    width: 300px;
-    text-align: center;
-}
-.startquiz-btn:hover{
-    cursor: pointer;
 }
 
 .gramatica-btn {
     background-color: #e3b67a;
-    padding: 7px 70px 14px;
-    border-radius: 30px;
-    font-size: 18px;
-    box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.3);
 
-    width: 300px;
-}
-
-.gramatica-btn:hover{
-    cursor: pointer;
 }
 
 .criadores-btn {
     background-color: #e3b67a;
-    padding: 7px 70px 14px;
-    border-radius: 30px;
-    font-size: 18px;
-    box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.3);
 
-    width: 300px;
-    align-items: center;
-    justify-content: center;
-    display: fle;
 }
 
-.criadores-btn:hover{
-    cursor: pointer;
+
+@keyframes showRight {
+    0% {
+        transform: translateX(50%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes showLeft {
+    0% {
+        transform: translateX(-50%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
 }
