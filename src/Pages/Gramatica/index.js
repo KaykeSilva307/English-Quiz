@@ -128,65 +128,84 @@ function Gramatica() {
 
   return (
     <>
-    <main>
-      <p className="boasvindas">
-        Bem-vindo à página de Gramática, aqui você poderá ver de forma mais dinâmica cada tempo verbal,
-        como eles são estruturados, exemplos e suas formas negativas, positivas e interrogativas.
-      </p>
+      <main>
 
-      <div className="container">
-        {/* Div com os botões */}
-        <div className="botoes-container">
-          <button
-            className='simplePast-btn'
-            onClick={() => setTempoSelecionado("passado")
-            }
-          >
-            Simple Past
-          </button>
-          <button
-            className='presentContinuous-btn'
-            onClick={() => setTempoSelecionado("continuo")}
-          >
-            Present Continuous
-          </button>
-          <button
-            className='simplePresent-btn'
-            onClick={() => setTempoSelecionado("presente")}
-          >
-            Simple Present
-          </button>
-          <button
-            className='simpleFuture-btn'
-            onClick={() => setTempoSelecionado("futuro")}
-          >
-            Simple Future
-          </button>
-        </div>
+        <p className="boasvindas">
+          Bem-vindo à página de Gramática, aqui você poderá ver de forma mais dinâmica cada tempo verbal,
+          como eles são estruturados, exemplos e suas formas negativas, positivas e interrogativas,
+          além de pronomes e verbos
+        </p>
 
-        {/* Div que muda o conteúdo */}
-        <div className="tempoVerbal">
-          <strong>{temposVerbais[tempoSelecionado].tempoVerbal}</strong>
-        </div>
-
-        <div className="divPrincipal">
-          <div className="subDivs">
-            {temposVerbais[tempoSelecionado].colunas.map((coluna, index) => (
-              <div key={index} className="coluna">
-                <div className="titulo">{coluna.titulo}</div>
-                <div className="explicacao">
-                  {Array.isArray(coluna.explicacao)
-                    ? coluna.explicacao.map((item, i) => <p style={{marginBottom: "0.5em"}} key={i}>{item}</p>)
-                    : <p>{coluna.explicacao}</p>
-                  }
-                </div>
-              </div>
-            ))}
+        <section className="firstDiv">
+          <div>
+            <p>Escolha uma das opções abaixo para saber mais...</p>
+            <ul>
+              <li><button className="tempoVerbal-btn">Tempo Verbal</button></li>
+              <li><button className="pronomes-btn">Pronomes</button></li>
+              <li><button className="modalVerbs-btn">Modal Verbs</button></li>
+            </ul>
           </div>
-        </div>
-      </div>
-    </main>
-      
+        </section>
+
+
+        
+        <section>
+          <div className="container">
+            {/* Div com os botões */}
+            <div className="botoes-container">
+              <button
+                className='simplePast-btn'
+                onClick={() => setTempoSelecionado("passado")
+                }
+              >
+                Simple Past
+              </button>
+              <button
+                className='presentContinuous-btn'
+                onClick={() => setTempoSelecionado("continuo")}
+              >
+                Present Continuous
+              </button>
+              <button
+                className='simplePresent-btn'
+                onClick={() => setTempoSelecionado("presente")}
+              >
+                Simple Present
+              </button>
+              <button
+                className='simpleFuture-btn'
+                onClick={() => setTempoSelecionado("futuro")}
+              >
+                Simple Future
+              </button>
+            </div>
+
+            {/* Div que muda o conteúdo */}
+            <div className="tempoVerbal">
+              <strong>{temposVerbais[tempoSelecionado].tempoVerbal}</strong>
+            </div>
+
+            <div className="divPrincipal">
+              <div className="subDivs">
+                {temposVerbais[tempoSelecionado].colunas.map((coluna, index) => (
+                  <div key={index} className="coluna">
+                    <div className="titulo">{coluna.titulo}</div>
+                    <div className="explicacao">
+                      {Array.isArray(coluna.explicacao)
+                        ? coluna.explicacao.map((item, i) => <p style={{ marginBottom: "0.5em" }} key={i}>{item}</p>)
+                        : <p>{coluna.explicacao}</p>
+                      }
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+
+      </main>
+
     </>
   );
 }

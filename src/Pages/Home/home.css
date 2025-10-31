@@ -4,7 +4,7 @@
     --cor-terciaria: #e3b67a;
     --cor-texto: #333;
     --cor-fundo: #8c8e8f;
-    --cor-fundo-div: #fefefede;
+    --cor-fundo-div: #f0f0f0de;
 }
 
 
@@ -153,13 +153,10 @@ ul {
     background-color: #d8a15b;
 }
 
-.gramatica-btn {
+.gramatica-btn, .criadores-btn{
     background-color: #e3b67a;
 }
 
-.criadores-btn {
-    background-color: #e3b67a;
-}
 
 @keyframes showRight {
     0% {
