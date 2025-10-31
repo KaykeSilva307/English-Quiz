@@ -18,9 +18,9 @@ function Home() {
             <div className="divBotoes">
               <h2 className="comeceJa">Comece já</h2>
               <ul >
-                <li><Link to='/quiz' ><button className="startquiz-btn"> <box-icon name='pencil' color='#2f3132' ></box-icon>Start Quiz</button></Link></li>
-                <li><Link to='/gramatica' ><button className="gramatica-btn"><box-icon name='book-open' color='#2f3132' ></box-icon>Gramática</button></Link></li>
-                <li><Link to='/criadores' ><button className="criadores-btn"><box-icon name='group' color='#2f3132' ></box-icon>Criadores</button></Link></li>
+                <li><Link to='/quiz' ><button className="startquiz-btn"> <box-icon name='pencil' ></box-icon>Start Quiz</button></Link></li>
+                <li><Link to='/gramatica' ><button className="gramatica-btn"><box-icon name='book-open'></box-icon>Gramática</button></Link></li>
+                <li><Link to='/criadores' ><button className="criadores-btn"><box-icon name='group'></box-icon>Criadores</button></Link></li>
 
               </ul>
 

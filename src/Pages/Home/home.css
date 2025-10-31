@@ -33,13 +33,13 @@ section {
 
     position: relative;
     top: 25%;
+    margin: 0 50px;
 }
 
 .coluna1,
 .coluna2 {
     height: 100%;
     width: 400px;
-
 }
 
 /* Left div */
@@ -59,6 +59,7 @@ section {
     align-items: center;
 
     animation: showLeft .5s ease-out;
+    box-shadow: 0px 4px 8px #2f3132;
 }
 
 .bemvindoText {
@@ -88,6 +89,8 @@ ul {
     flex-direction: column;
     flex-grow: 2;
     margin-top: 10px;
+
+    align-items: center;
 }
 
 
@@ -106,7 +109,7 @@ ul {
     padding: 50px 20px;
     flex: 1;
     height: 100%;
-    width: 400px;
+    width: 100%;
 
     display: flex;
     align-items: center;
@@ -114,6 +117,7 @@ ul {
     flex-direction: column;
 
     animation: showRight .5s ease-out;
+    box-shadow: 0px 4px 8px #2f3132;
 }
 
 .divBotoes box-icon {
@@ -122,20 +126,27 @@ ul {
 }
 
 .divBotoes button {
-    width: 300px;
     height: 50px;
     border-radius: 50px;
     font-size: 18px;
     font-weight: bold;
+    width: 300px;
+    box-shadow: 0px 4px 8px #2f3132;
 
     transform: translateY(0);
     transition: transform 0.4s ease-in;
 }
 
-.divBotoes button:hover {
+.divBotoes button:hover{
     cursor: pointer;
-    transform: translateY(-2px);
+    transform: translateY(-2px) scale(1.05);
     transition: transform 0.3s ease-out;
+
+    color: #FFF;
+}
+
+.divBotoes button:hover  box-icon{
+    fill: #FFF;
 }
 
 .startquiz-btn {
@@ -144,14 +155,11 @@ ul {
 
 .gramatica-btn {
     background-color: #e3b67a;
-
 }
 
 .criadores-btn {
     background-color: #e3b67a;
-
 }
-
 
 @keyframes showRight {
     0% {
