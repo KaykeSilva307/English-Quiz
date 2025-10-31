@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/English-Quiz/static/css/main.f4b2ece0.css",
-    "main.js": "/English-Quiz/static/js/main.dc89cc4e.js",
+    "main.css": "/English-Quiz/static/css/main.9fd25cf8.css",
+    "main.js": "/English-Quiz/static/js/main.bad73478.js",
     "static/media/Kayke.jpg": "/English-Quiz/static/media/Kayke.ed5f70bed44aea73597d.jpg",
     "static/media/AnnaClara.jpg": "/English-Quiz/static/media/AnnaClara.1553d72d89d1f5850ea2.jpg",
     "static/media/Gabriel.jpg": "/English-Quiz/static/media/Gabriel.b511b7d052f772c498f7.jpg",
     "index.html": "/English-Quiz/index.html",
-    "main.f4b2ece0.css.map": "/English-Quiz/static/css/main.f4b2ece0.css.map",
-    "main.dc89cc4e.js.map": "/English-Quiz/static/js/main.dc89cc4e.js.map"
+    "main.9fd25cf8.css.map": "/English-Quiz/static/css/main.9fd25cf8.css.map",
+    "main.bad73478.js.map": "/English-Quiz/static/js/main.bad73478.js.map"
   },
   "entrypoints": [
-    "static/css/main.f4b2ece0.css",
-    "static/js/main.dc89cc4e.js"
+    "static/css/main.9fd25cf8.css",
+    "static/js/main.bad73478.js"
   ]
 }
