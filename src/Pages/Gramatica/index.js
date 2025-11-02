@@ -204,11 +204,76 @@ function Gramatica() {
           </section>
         }
         {secaoAtiva === "pronomes" &&
-          <section>
-            <div className="container">
+          <>
+            <section className="container-pronomes">
+              <h2 className="subjectH2">Subject Pronouns</h2>
+              <h2 className="objectH2">Object Pronouns</h2>
+              <div className="container-content">
+                <div className="firstDivPronomes">
+                  <h2>Singular</h2>
+                  <h2>Plural</h2>
+                </div>
+                <div className="secondDivPronomes">
+                  <h4>1st person</h4>
+                  <h4>2nd person</h4>
+                  <h4>3rd person (male)</h4>
+                  <h4>3rd person (female)</h4>
+                  <h4>3rd person (non-person)</h4>
+                  <hr className="diviser"/>
+                  <h4>1st person</h4>
+                  <h4>2nd person</h4>
+                  <h4>3rd person</h4>
+                </div>
+                <div className="thirdDivPronomes">
+                  <h4>I</h4>
+                  <h4>YOU</h4>
+                  <h4>HE</h4>
+                  <h4>SHE</h4>
+                  <h4>IT</h4>
+                  <hr className="diviser"/>
+                  <h4>WE</h4>
+                  <h4>YOU</h4>
+                  <h4>THEY</h4>
+                </div>
+                <div className="fourthDivPronomes">
+                  <h4><strong>I</strong> kicked the ball.</h4>
+                  <h4><strong>You</strong> like to study.</h4>
+                  <h4><strong>He</strong> eats green cheese.</h4>
+                  <h4><strong>She</strong> likes ice cream.</h4>
+                  <h4><strong>It</strong> bit jhon.</h4>
+                  <hr className="diviser"/>
+                  <h4><strong>We</strong> enjoy going to the movies.</h4>
+                  <h4><strong>You</strong> are the best students.</h4>
+                  <h4><strong>They</strong> are not happy.</h4>
+                </div>
+                <div className="fifthDivPronomes">
+                  <h4>ME</h4>
+                  <h4>YOU</h4>
+                  <h4>HIM</h4>
+                  <h4>HER</h4>
+                  <h4>IT</h4>
+                  <hr className="diviser"/>
+                  <h4>US</h4>
+                  <h4>YOU</h4>
+                  <h4>THEM</h4>
+                </div>
+                <div className="sixthDivPronomes">
+                  <h4>John kicked the ball to <strong>me</strong>.</h4>
+                  <h4>John wants to talk to <strong>you</strong>.</h4>
+                  <h4>Mary doesn't like <strong>him</strong>.</h4>
+                  <h4>John kissed <strong>her</strong>.</h4>
+                  <h4>John smashed <strong>it</strong>.</h4>
+                  <hr className="diviser"/>
+                  <h4>The politician lied to <strong>us</strong>.</h4>
+                  <h4>I wouldn't lie to <strong>you</strong>.</h4>
+                  <h4>Mary didn't invite <strong>them</strong>.</h4>
+                </div>
+              </div>
 
-            </div>
-          </section>
+            </section>
+
+          </>
+
         }
         {secaoAtiva === "modalVerbs" &&
           <section>
