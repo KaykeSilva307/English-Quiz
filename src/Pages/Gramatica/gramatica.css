@@ -21,12 +21,15 @@ main {
     width: 1200px;
     font-size: 22px;
     font-weight: bold;
+
+    animation: showUp 0.7s ease-in-out;
 }
 
 
 /* Primeira div */
 .firstDiv {
-    transform: translateY(-50%);
+    position: relative;
+    top: 100px;
     max-width: 400px;
     margin-left: auto;
     margin-right: auto;
@@ -36,6 +39,8 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    animation: showUp 1s ease-in-out;
 }
 
 .firstDiv p {
@@ -97,16 +102,21 @@ main {
     height: 500px;
     width: calc(100vw - 20px);
     margin: 0;
-    transform: translateY(-26%);
+    position: relative;
+    top: 150px;
 
 }
+
 
 
 .botoes-container {
     display: flex;
     justify-content: center;
     gap: 40px;
+}
 
+.botoes-container.animate {
+    animation: pop 0.5s ease-in-out forwards;
 }
 
 /* Para todos os botoes do tempo verbal */
@@ -139,8 +149,15 @@ main {
 .tempoVerbal {
     display: flex;
     justify-content: center;
-    margin-bottom: 20px;
     font-size: 25px;
+    padding-bottom: 5px;
+    margin: 0 auto 20px;
+    width: 300px;
+    border-bottom: #000 2px solid;
+}
+
+.tempoVerbal.animate {
+    animation: showUp 0.8s ease;
 }
 
 /* Cada botao do tempo verbal */
@@ -156,11 +173,15 @@ main {
     color: #15ff00b4;
 }
 
-
 .simpleFuture-btn:hover {
     color: #0011ffb4
 }
 
+
+.divPrincipal.animate {
+    animation: showUp 0.8s ease;
+
+}
 
 
 
@@ -171,13 +192,6 @@ main {
     justify-content: center;
     gap: 20px;
 
-}
-
-.tempoVerbal {
-    padding-bottom: 5px;
-    margin: 0 auto 15px;
-    width: 300px;
-    border-bottom: #000 2px solid;
 }
 
 .coluna {
@@ -192,8 +206,8 @@ main {
     border-radius: 20px;
     background-color: #fefefe80;
     padding: 0px 15px;
-
-
+    box-shadow: 0px 4px 8px #2f3132;
+    margin-bottom: 50px;
 }
 
 .titulo {
@@ -224,104 +238,168 @@ hr {
     margin: 10px 0 10px;
 }
 
+.button-pronomes {
+    height: 200px;
+    top: 100px;
+
+    flex-wrap: wrap;
+    width: 700px;
+    margin: 0 auto;
+}
+
+
+.button-pronomes.animate {
+    animation: pop 0.5s ease-in-out forwards;
+}
+
+.button-pronomes ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+   
+}
+
+.button-pronomes button {
+    height: 50px;
+    width: 150px;
+    border-radius: 25px;
+    background-color: var(--cor-terciaria);
+    cursor: pointer;
+    transition: transform 0.4s ease-in-out;
+    transform: translateY(0);
+    font-size: 15px;
+    font-weight: bold;
+    box-shadow: 0px 3px 5px #2f3132;
+    padding: 0 20px;
+
+}
+
+.button-pronomes button:hover {
+    background-color: var(--cor-secundaria);
+    transform: translateY(-2px) scale(1.05);
+    transition: transform 0.3s ease-out;
+    color: #FFF;
+}
+
 .container-pronomes {
     border: #000 solid 1px;
     border-radius: 20px;
-    width: 1000px;
+    width: 700px;
 
-    margin: 0 auto;
+    margin: 0 auto 0;
+    padding: 0 10px;
     display: flex;
     flex-direction: row;
     height: 300px;
 
-    transform: translateY(-50px);
+
+    position: relative;
+    top: 100px;
 
     background-color: #fefefe80;
+    box-shadow: 0px 4px 8px #2f3132;
+
 }
+
+.container-pronomes.animate {
+    animation: showUp 0.6s ease;
+}
+
+
 
 .container-content {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 
     width: 100%;
     height: 100%;
 }
 
+
 .container-pronomes strong {
-    color: #aa46aa;
+    color: var(--cor-secundaria);
+    text-shadow: 0px 1px 3px #000;
 }
 
-.subjectH2 {
+.tipePronouns {
     position: absolute;
-    top: 20px;
-    left: 380px;
+    top: 15px;
+    left: 15%;
+    text-shadow: 0px 1px 1px #000;
+    width: 500px;
+    text-align: center;
 }
 
-.objectH2 {
-    position: absolute;
-    top: 20px;
-    left: 700px;
-}
-
-.firstDivPronomes {
+.pronouns1 {
     display: flex;
-    flex-grow: 2;
     flex-direction: column;
-    padding: 50px 0 50px;
-    height: 100%;
-    justify-content: center;
-    align-items: center;
+    padding: 30px 15px 10px 30px;
+    gap: 70px;
+
 }
 
-.firstDivPronomes h2{
-    height: 100%;
+.pronouns2 {
     display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.secondDivPronomes {
-    display: flex;
-    flex-grow: 3;
     flex-direction: column;
-    height: 100%;
-    justify-content: center;
+    margin-right: 5px;
 
 }
 
-.thirdDivPronomes {
+.pronouns3 {
     display: flex;
-    flex-grow: 1;
     flex-direction: column;
-    height: 100%;
-    justify-content: center;
-
+    margin-right: 20px;
 }
 
-.fourthDivPronomes {
+.pronouns4 {
     display: flex;
-    flex-grow: 3;
     flex-direction: column;
-    height: 100%;
-    justify-content: center;
-
+    margin-right: auto;
 }
 
-.fifthDivPronomes {
+.pronouns1Demonstrative {
     display: flex;
-    flex-grow: 1;
     flex-direction: column;
-    height: 100%;
-    justify-content: center;
-
+    padding: 30px 15px 30px 30px;
+    gap: 20px;
 }
 
-.sixthDivPronomes {
-    display: flex;
-    flex-grow: 3;
-    flex-direction: column;
-    height: 100%;
-    justify-content: center;
 
+
+/* Animaçoes */
+@keyframes pop {
+    0% {
+        transform: scale(1);
+
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+
+    }
+}
+
+@keyframes showUp {
+    0% {
+        transform: translateY(-30px);
+    }
+
+    50% {
+        transform: translateY(10px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+footer{
+    height: 100px;
 }

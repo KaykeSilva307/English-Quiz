@@ -4,6 +4,7 @@ import "./gramatica.css"; // caso você esteja usando CSS separado
 function Gramatica() {
   // estado que guarda qual tempo verbal foi escolhido
   const [tempoSelecionado, setTempoSelecionado] = useState("presente");
+  const [tipoPronome, setTipoPronome] = useState('')
 
   const [secaoAtiva, setSecaoAtiva] = useState(null);
   // conteúdo dos tempos verbais
@@ -127,6 +128,8 @@ function Gramatica() {
   };
 
 
+  const [animar, setAnimar] = useState(false)
+
   return (
     <>
       <main>
@@ -141,39 +144,40 @@ function Gramatica() {
           <div>
             <p>Escolha uma das opções abaixo para saber mais...</p>
             <ul>
-              <li><button className="tempoVerbal-btn" onClick={() => setSecaoAtiva("tempoVerbal")}>Tempo Verbal</button></li>
-              <li><button className="pronomes-btn" onClick={() => setSecaoAtiva("pronomes")}>Pronomes</button></li>
-              <li><button className="modalVerbs-btn" onClick={() => setSecaoAtiva("modalVerbs")}>Modal Verbs</button></li>
+              <li><button className="tempoVerbal-btn" onClick={() => { setSecaoAtiva("tempoVerbal"); setAnimar(true) }}>Tempo Verbal</button></li>
+              <li><button className="pronomes-btn" onClick={() => { setSecaoAtiva("pronomes"); setAnimar(true) }}>Pronomes</button></li>
+              <li><button className="modalVerbs-btn" onClick={() => { setSecaoAtiva("modalVerbs"); setAnimar(true) }}>Modal Verbs</button></li>
+
             </ul>
           </div>
         </section>
 
         {secaoAtiva === "tempoVerbal" &&
           <section className="container">
-            <div>
+            <div className="subContainer">
               {/* Div com os botões */}
-              <div className="botoes-container">
+              <div className={`botoes-container ${animar ? 'animate' : ''}`}>
                 <button
-                  className='simplePast-btn'
+                  className="simplePast-btn"
                   onClick={() => setTempoSelecionado("passado")
                   }
                 >
                   Simple Past
                 </button>
                 <button
-                  className='presentContinuous-btn'
+                  className="presentContinuous-btn"
                   onClick={() => setTempoSelecionado("continuo")}
                 >
                   Present Continuous
                 </button>
                 <button
-                  className='simplePresent-btn'
+                  className="simplePresent-btn"
                   onClick={() => setTempoSelecionado("presente")}
                 >
                   Simple Present
                 </button>
                 <button
-                  className='simpleFuture-btn'
+                  className="simpleFuture-btn"
                   onClick={() => setTempoSelecionado("futuro")}
                 >
                   Simple Future
@@ -181,11 +185,11 @@ function Gramatica() {
               </div>
 
               {/* Div que muda o conteúdo */}
-              <div className="tempoVerbal">
+              <div className={`tempoVerbal ${animar ? 'animate' : ''}`}>
                 <strong>{temposVerbais[tempoSelecionado].tempoVerbal}</strong>
               </div>
 
-              <div className="divPrincipal">
+              <div className={`divPrincipal ${animar ? 'animate' : ''}`}>
                 <div className="subDivs">
                   {temposVerbais[tempoSelecionado].colunas.map((coluna, index) => (
                     <div key={index} className="coluna">
@@ -205,86 +209,339 @@ function Gramatica() {
         }
         {secaoAtiva === "pronomes" &&
           <>
-            <section className="container-pronomes">
-              <h2 className="subjectH2">Subject Pronouns</h2>
-              <h2 className="objectH2">Object Pronouns</h2>
-              <div className="container-content">
-                <div className="firstDivPronomes">
-                  <h2>Singular</h2>
-                  <h2>Plural</h2>
-                </div>
-                <div className="secondDivPronomes">
-                  <h4>1st person</h4>
-                  <h4>2nd person</h4>
-                  <h4>3rd person (male)</h4>
-                  <h4>3rd person (female)</h4>
-                  <h4>3rd person (non-person)</h4>
-                  <hr className="diviser"/>
-                  <h4>1st person</h4>
-                  <h4>2nd person</h4>
-                  <h4>3rd person</h4>
-                </div>
-                <div className="thirdDivPronomes">
-                  <h4>I</h4>
-                  <h4>YOU</h4>
-                  <h4>HE</h4>
-                  <h4>SHE</h4>
-                  <h4>IT</h4>
-                  <hr className="diviser"/>
-                  <h4>WE</h4>
-                  <h4>YOU</h4>
-                  <h4>THEY</h4>
-                </div>
-                <div className="fourthDivPronomes">
-                  <h4><strong>I</strong> kicked the ball.</h4>
-                  <h4><strong>You</strong> like to study.</h4>
-                  <h4><strong>He</strong> eats green cheese.</h4>
-                  <h4><strong>She</strong> likes ice cream.</h4>
-                  <h4><strong>It</strong> bit jhon.</h4>
-                  <hr className="diviser"/>
-                  <h4><strong>We</strong> enjoy going to the movies.</h4>
-                  <h4><strong>You</strong> are the best students.</h4>
-                  <h4><strong>They</strong> are not happy.</h4>
-                </div>
-                <div className="fifthDivPronomes">
-                  <h4>ME</h4>
-                  <h4>YOU</h4>
-                  <h4>HIM</h4>
-                  <h4>HER</h4>
-                  <h4>IT</h4>
-                  <hr className="diviser"/>
-                  <h4>US</h4>
-                  <h4>YOU</h4>
-                  <h4>THEM</h4>
-                </div>
-                <div className="sixthDivPronomes">
-                  <h4>John kicked the ball to <strong>me</strong>.</h4>
-                  <h4>John wants to talk to <strong>you</strong>.</h4>
-                  <h4>Mary doesn't like <strong>him</strong>.</h4>
-                  <h4>John kissed <strong>her</strong>.</h4>
-                  <h4>John smashed <strong>it</strong>.</h4>
-                  <hr className="diviser"/>
-                  <h4>The politician lied to <strong>us</strong>.</h4>
-                  <h4>I wouldn't lie to <strong>you</strong>.</h4>
-                  <h4>Mary didn't invite <strong>them</strong>.</h4>
-                </div>
-              </div>
+            <section className={`button-pronomes ${animar ? 'animate' : ''}`}>
+              <ul>
+                <li><button className="subjectPronouns-btn" onClick={() => { setTipoPronome("subjectPronouns"); setAnimar(true) }}>Subject Pronouns</button></li>
+                <li><button className="objectPronouns-btn" onClick={() => { setTipoPronome("objectPronouns"); setAnimar(true) }}>Object Pronouns</button></li>
+                <li><button className="possessiveAdjectives-btn" onClick={() => { setTipoPronome("possessiveAdjectives"); setAnimar(true) }}>Possessive Adjectives</button></li>
+                <li><button className="possessivePronouns-btn" onClick={() => { setTipoPronome("possessivePronouns"); setAnimar(true) }}>Possessive Pronouns </button></li>
+                <li><button className="demonstrativePronouns-btn" onClick={() => { setTipoPronome("demonstrativePronouns"); setAnimar(true) }}>Demonstrative Pronouns</button></li>
+                <li><button className="interrogativePronouns-btn" onClick={() => { setTipoPronome("interrogativePronouns"); setAnimar(true) }}>Interrogative Pronouns</button></li>
 
+              </ul>
             </section>
 
+            {tipoPronome === 'subjectPronouns' &&
+              <section className={`container-pronomes ${animar ? 'animate' : ''}`}>
+
+                <h2 className="tipePronouns">Subject Pronouns</h2>
+                <div className="container-content">
+                  <div className="pronouns1">
+                    <h2>Singular</h2>
+                    <h2>Plural</h2>
+                  </div>
+                  <div className="pronouns2">
+                    <h4>1st person</h4>
+                    <h4>2nd person</h4>
+                    <h4>3rd person (male)</h4>
+                    <h4>3rd person (female)</h4>
+                    <h4>3rd person (non-person)</h4>
+                    <hr />
+                    <h4>1st person</h4>
+                    <h4>2nd person</h4>
+                    <h4>3rd person</h4>
+                  </div>
+                  <div className="pronouns3">
+                    <h4>I</h4>
+                    <h4>YOU</h4>
+                    <h4>HE</h4>
+                    <h4>SHE</h4>
+                    <h4>IT</h4>
+                    <hr />
+                    <h4>WE</h4>
+                    <h4>YOU</h4>
+                    <h4>THEY</h4>
+                  </div>
+                  <div className="pronouns4">
+                    <h4><strong>I</strong> kicked the ball.</h4>
+                    <h4><strong>You</strong> like to study.</h4>
+                    <h4><strong>He</strong> eats green cheese.</h4>
+                    <h4><strong>She</strong> likes ice cream.</h4>
+                    <h4><strong>It</strong> bit jhon.</h4>
+                    <hr />
+                    <h4><strong>We</strong> enjoy going to the movies.</h4>
+                    <h4><strong>You</strong> are the best students.</h4>
+                    <h4><strong>They</strong> are not happy.</h4>
+                  </div>
+                </div>
+              </section>}
+
+            {tipoPronome === 'objectPronouns' &&
+              <section className={`container-pronomes ${animar ? 'animate' : ''}`}>
+
+                <h2 className="tipePronouns">Object Pronouns</h2>
+                <div className="container-content">
+                  <div className="pronouns1">
+                    <h2>Singular</h2>
+                    <h2>Plural</h2>
+                  </div>
+                  <div className="pronouns2">
+                    <h4>1st person</h4>
+                    <h4>2nd person</h4>
+                    <h4>3rd person (male)</h4>
+                    <h4>3rd person (female)</h4>
+                    <h4>3rd person (non-person)</h4>
+                    <hr />
+                    <h4>1st person</h4>
+                    <h4>2nd person</h4>
+                    <h4>3rd person</h4>
+                  </div>
+                  <div className="pronouns3">
+                    <h4>ME</h4>
+                    <h4>YOU</h4>
+                    <h4>HIM</h4>
+                    <h4>HER</h4>
+                    <h4>IT</h4>
+                    <hr />
+                    <h4>US</h4>
+                    <h4>YOU</h4>
+                    <h4>THEM</h4>
+                  </div>
+                  <div className="pronouns4">
+                    <h4>John kicked the ball to <strong>me</strong>.</h4>
+                    <h4>John wants to talk to <strong>you</strong>.</h4>
+                    <h4>Mary doesn't like <strong>him</strong>.</h4>
+                    <h4>John kissed <strong>her</strong>.</h4>
+                    <h4>John smashed <strong>it</strong>.</h4>
+                    <hr />
+                    <h4>The politician lied to <strong>us</strong>.</h4>
+                    <h4>I wouldn't lie to <strong>you</strong>.</h4>
+                    <h4>Mary didn't invite <strong>them</strong>.</h4>
+                  </div>
+                </div>
+
+              </section>
+            }
+
+            {tipoPronome === 'possessiveAdjectives' &&
+              <section className={`container-pronomes ${animar ? 'animate' : ''}`}>
+
+                <h2 className="tipePronouns">Possessive Adjectives</h2>
+                <div className="container-content">
+                  <div className="pronouns1">
+                    <h2>Singular</h2>
+                    <h2>Plural</h2>
+                  </div>
+
+                  <div className="pronouns2">
+                    <h4>1st person</h4>
+                    <h4>2nd person</h4>
+                    <h4>3rd person (male)</h4>
+                    <h4>3rd person (female)</h4>
+                    <h4>3rd person (non-person)</h4>
+                    <hr />
+                    <h4>1st person</h4>
+                    <h4>2nd person</h4>
+                    <h4>3rd person</h4>
+                  </div>
+
+                  <div className="pronouns3">
+                    <h4>MY</h4>
+                    <h4>YOUR</h4>
+                    <h4>HIS</h4>
+                    <h4>HER</h4>
+                    <h4>ITS</h4>
+                    <hr />
+                    <h4>OUR</h4>
+                    <h4>YOUR</h4>
+                    <h4>THEIR</h4>
+                  </div>
+
+                  <div className="pronouns4">
+                    <h4>This is <strong>my</strong> book.</h4>
+                    <h4>Where is <strong>your</strong> pen?</h4>
+                    <h4>That’s <strong>his</strong> car.</h4>
+                    <h4><strong>Her</strong> dog is very cute.</h4>
+                    <h4>The cat cleaned <strong>its</strong> paws.</h4>
+                    <hr />
+                    <h4>This is <strong>our</strong> house.</h4>
+                    <h4>Is that <strong>your</strong> laptop?</h4>
+                    <h4><strong>Their</strong> children are playing outside.</h4>
+                  </div>
+                </div>
+
+
+              </section>
+            }
+
+            {tipoPronome === 'possessivePronouns' &&
+              <section className={`container-pronomes ${animar ? 'animate' : ''}`}>
+
+                <h2 className="tipePronouns">Possessive Pronouns</h2>
+                <div className="container-content">
+                  <div className="pronouns1">
+                    <h2>Singular</h2>
+                    <h2>Plural</h2>
+                  </div>
+
+                  <div className="pronouns2">
+                    <h4>1st person</h4>
+                    <h4>2nd person</h4>
+                    <h4>3rd person (male)</h4>
+                    <h4>3rd person (female)</h4>
+                    <h4>3rd person (non-person)</h4>
+                    <hr />
+                    <h4>1st person</h4>
+                    <h4>2nd person</h4>
+                    <h4>3rd person</h4>
+                  </div>
+
+                  <div className="pronouns3">
+                    <h4>MINE</h4>
+                    <h4>YOURS</h4>
+                    <h4>HIS</h4>
+                    <h4>HERS</h4>
+                    <h4>ITS*</h4>
+                    <hr />
+                    <h4>OURS</h4>
+                    <h4>YOURS</h4>
+                    <h4>THEIRS</h4>
+                  </div>
+
+                  <div className="pronouns4">
+                    <h4>This book is <strong>mine</strong>.</h4>
+                    <h4>That pencil is <strong>yours</strong>.</h4>
+                    <h4>The red car is <strong>his</strong>.</h4>
+                    <h4>The blue one is <strong>hers</strong>.</h4>
+                    <h4>The cat ate <strong>its*</strong> food. <small>(raro)</small></h4>
+                    <hr />
+                    <h4>The big house is <strong>ours</strong>.</h4>
+                    <h4>Those keys are <strong>yours</strong>.</h4>
+                    <h4>The toys are <strong>theirs</strong>.</h4>
+                  </div>
+                </div>
+
+              </section>
+            }
+            {tipoPronome === 'reflexivePronouns' &&
+              <section className={`container-pronomes ${animar ? 'animate' : ''}`}>
+
+                <h2 className="tipePronouns">Reflexive Pronouns</h2>
+                <div className="container-content">
+                  <div className="pronouns1">
+                    <h2>Singular</h2>
+                    <h2>Plural</h2>
+                  </div>
+
+                  <div className="pronouns2">
+                    <h4>1st person</h4>
+                    <h4>2nd person</h4>
+                    <h4>3rd person (male)</h4>
+                    <h4>3rd person (female)</h4>
+                    <h4>3rd person (non-person)</h4>
+                    <hr />
+                    <h4>1st person</h4>
+                    <h4>2nd person</h4>
+                    <h4>3rd person</h4>
+                  </div>
+
+                  <div className="pronouns3">
+                    <h4>MYSELF</h4>
+                    <h4>YOURSELF</h4>
+                    <h4>HIMSELF</h4>
+                    <h4>HERSELF</h4>
+                    <h4>ITSELF</h4>
+                    <hr />
+                    <h4>OURSELVES</h4>
+                    <h4>YOURSELVES</h4>
+                    <h4>THEMSELVES</h4>
+                  </div>
+
+                  <div className="pronouns4">
+                    <h4>I cut <strong>myself</strong> while cooking.</h4>
+                    <h4>Be careful not to hurt <strong>yourself</strong>.</h4>
+                    <h4>He blames <strong>himself</strong> for the mistake.</h4>
+                    <h4>She taught <strong>herself</strong> to play guitar.</h4>
+                    <h4>The dog cleaned <strong>itself</strong>.</h4>
+                    <hr />
+                    <h4>We enjoyed <strong>ourselves</strong> at the party.</h4>
+                    <h4>You should be proud of <strong>yourselves</strong>.</h4>
+                    <h4>They introduced <strong>themselves</strong> to the group.</h4>
+                  </div>
+                </div>
+
+              </section>
+            }
+            {tipoPronome === 'demonstrativePronouns' &&
+              <section className={`container-pronomes ${animar ? 'animate' : ''}`}>
+
+                <h2 className="tipePronouns">Demonstrative Pronouns</h2>
+                <div className="container-content">
+                  <div className="pronouns1Demonstrative">
+                    <h2>Singular</h2>
+                    <h2>Plural</h2>
+                  </div>
+
+                  <div className="pronouns2">
+                    <h4>Near (perto)</h4>
+                    <h4>Far (longe)</h4>
+                    <hr />
+                    <h4>Near (perto)</h4>
+                    <h4>Far (longe)</h4>
+                  </div>
+
+                  <div className="pronouns3">
+                    <h4>THIS</h4>
+                    <h4>THAT</h4>
+                    <hr />
+                    <h4>THESE</h4>
+                    <h4>THOSE</h4>
+                  </div>
+
+                  <div className="pronouns4">
+                    <h4><strong>This</strong> is my phone. (Este é meu celular.)</h4>
+                    <h4><strong>That</strong> is your car. (Aquele é seu carro.)</h4>
+                    <hr />
+                    <h4><strong>These</strong> are my friends. (Estes são meus amigos.)</h4>
+                    <h4><strong>Those</strong> are my shoes. (Aqueles são meus sapatos.)</h4>
+                  </div>
+                </div>
+
+              </section>
+            }
+            {tipoPronome === 'interrogativePronouns' &&
+              <section className={`container-pronomes ${animar ? 'animate' : ''}`}>
+
+                <h2 className="tipePronouns">Interrogative Pronouns</h2>
+                <div className="container-content">
+                  <div className="pronouns1">
+                    <h2>Singular / Plural</h2>
+                  </div>
+
+                  <div className="pronouns2">
+                    <h4>WHO</h4>
+                    <h4>WHOM</h4>
+                    <h4>WHOSE</h4>
+                    <h4>WHAT</h4>
+                    <h4>WHICH</h4>
+                  </div>
+
+                  <div className="pronouns3">
+                    <h4>Quem (sujeito)</h4>
+                    <h4>Quem (objeto)</h4>
+                    <h4>De quem</h4>
+                    <h4>O que / Qual</h4>
+                    <h4>Qual (entre opções)</h4>
+                  </div>
+
+                  <div className="pronouns4">
+                    <h4><strong>Who</strong> is knocking at the door?</h4>
+                    <h4>To <strong>whom</strong> did you speak?</h4>
+                    <h4><strong>Whose</strong> book is this?</h4>
+                    <h4><strong>What</strong> is your name?</h4>
+                    <h4><strong>Which</strong> one do you prefer?</h4>
+                  </div>
+                </div>
+
+              </section>
+              
+            }
+
+            
           </>
-
-        }
-        {secaoAtiva === "modalVerbs" &&
-          <section>
-            <div className="container">
-
-            </div>
-          </section>
         }
       </main>
-
-
+      <footer></footer>
     </>
   );
 }
