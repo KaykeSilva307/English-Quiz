@@ -4,9 +4,11 @@ import "./gramatica.css"; // caso você esteja usando CSS separado
 function Gramatica() {
   // estado que guarda qual tempo verbal foi escolhido
   const [tempoSelecionado, setTempoSelecionado] = useState("presente");
-  const [tipoPronome, setTipoPronome] = useState('')
+  const [tipoPronome, setTipoPronome] = useState('subjectPronouns')
+  const [tipoModal, setTipoModal] = useState("afirmativa")
 
   const [secaoAtiva, setSecaoAtiva] = useState(null);
+
   // conteúdo dos tempos verbais
   const temposVerbais = {
     presente: {
@@ -152,62 +154,46 @@ function Gramatica() {
           </div>
         </section>
 
-        {secaoAtiva === "tempoVerbal" &&
-          <section className="container">
-            <div className="subContainer">
-              {/* Div com os botões */}
-              <div className={`botoes-container ${animar ? 'animate' : ''}`}>
-                <button
-                  className="simplePast-btn"
-                  onClick={() => setTempoSelecionado("passado")
-                  }
-                >
-                  Simple Past
-                </button>
-                <button
-                  className="presentContinuous-btn"
-                  onClick={() => setTempoSelecionado("continuo")}
-                >
-                  Present Continuous
-                </button>
-                <button
-                  className="simplePresent-btn"
-                  onClick={() => setTempoSelecionado("presente")}
-                >
-                  Simple Present
-                </button>
-                <button
-                  className="simpleFuture-btn"
-                  onClick={() => setTempoSelecionado("futuro")}
-                >
-                  Simple Future
-                </button>
-              </div>
 
-              {/* Div que muda o conteúdo */}
-              <div className={`tempoVerbal ${animar ? 'animate' : ''}`}>
-                <strong>{temposVerbais[tempoSelecionado].tempoVerbal}</strong>
-              </div>
 
-              <div className={`divPrincipal ${animar ? 'animate' : ''}`}>
-                <div className="subDivs">
-                  {temposVerbais[tempoSelecionado].colunas.map((coluna, index) => (
-                    <div key={index} className="coluna">
-                      <div className="titulo">{coluna.titulo}</div>
-                      <div className="explicacao">
-                        {Array.isArray(coluna.explicacao)
-                          ? coluna.explicacao.map((item, i) => <p style={{ marginBottom: "0.2em" }} key={i}>{item}</p>)
-                          : <p>{coluna.explicacao}</p>
-                        }
+        {secaoAtiva === "tempoVerbal" && (
+          <>
+            <section className="container">
+              <div className="subContainer">
+                {/* Div com os botões */}
+                <div className={`botoes-container ${animar ? 'animate' : ''}`}>
+                  <button className="simplePast-btn" onClick={() => setTempoSelecionado("passado")}>Simple Past</button>
+                  <button className="presentContinuous-btn" onClick={() => setTempoSelecionado("continuo")}>Present Continuous</button>
+                  <button className="simplePresent-btn" onClick={() => setTempoSelecionado("presente")}>Simple Present</button>
+                  <button className="simpleFuture-btn"onClick={() => setTempoSelecionado("futuro")}>Simple Future</button>
+                </div>
+
+                {/* Div que muda o conteúdo */}
+                <div className={`tempoVerbal ${animar ? 'animate' : ''}`}>
+                  <strong>{temposVerbais[tempoSelecionado].tempoVerbal}</strong>
+                </div>
+
+                <div className={`divPrincipal ${animar ? 'animate' : ''}`}>
+                  <div className="subDivs">
+                    {temposVerbais[tempoSelecionado].colunas.map((coluna, index) => (
+                      <div key={index} className="coluna">
+                        <div className="titulo">{coluna.titulo}</div>
+                        <div className="explicacao">
+                          {Array.isArray(coluna.explicacao)
+                            ? coluna.explicacao.map((item, i) => <p style={{ marginBottom: "0.2em" }} key={i}>{item}</p>)
+                            : <p>{coluna.explicacao}</p>
+                          }
+                        </div>
                       </div>
-                    </div>
-                  ))}
+                    ))}
+                  </div>
                 </div>
               </div>
-            </div>
-          </section>
-        }
-        {secaoAtiva === "pronomes" &&
+            </section>
+          </>
+        )}
+
+        {secaoAtiva === "pronomes" && (
           <>
             <section className={`button-pronomes ${animar ? 'animate' : ''}`}>
               <ul>
@@ -215,13 +201,14 @@ function Gramatica() {
                 <li><button className="objectPronouns-btn" onClick={() => { setTipoPronome("objectPronouns"); setAnimar(true) }}>Object Pronouns</button></li>
                 <li><button className="possessiveAdjectives-btn" onClick={() => { setTipoPronome("possessiveAdjectives"); setAnimar(true) }}>Possessive Adjectives</button></li>
                 <li><button className="possessivePronouns-btn" onClick={() => { setTipoPronome("possessivePronouns"); setAnimar(true) }}>Possessive Pronouns </button></li>
+                <li><button className="reflexivePronouns-btn" onClick={() => { setTipoPronome("reflexivePronouns"); setAnimar(true) }}>Reflexive Pronouns</button></li>
                 <li><button className="demonstrativePronouns-btn" onClick={() => { setTipoPronome("demonstrativePronouns"); setAnimar(true) }}>Demonstrative Pronouns</button></li>
                 <li><button className="interrogativePronouns-btn" onClick={() => { setTipoPronome("interrogativePronouns"); setAnimar(true) }}>Interrogative Pronouns</button></li>
 
               </ul>
             </section>
 
-            {tipoPronome === 'subjectPronouns' &&
+            {tipoPronome === 'subjectPronouns' && (
               <section className={`container-pronomes ${animar ? 'animate' : ''}`}>
 
                 <h2 className="tipePronouns">Subject Pronouns</h2>
@@ -264,9 +251,10 @@ function Gramatica() {
                     <h4><strong>They</strong> are not happy.</h4>
                   </div>
                 </div>
-              </section>}
+              </section>
+            )}
 
-            {tipoPronome === 'objectPronouns' &&
+            {tipoPronome === 'objectPronouns' && (
               <section className={`container-pronomes ${animar ? 'animate' : ''}`}>
 
                 <h2 className="tipePronouns">Object Pronouns</h2>
@@ -311,9 +299,9 @@ function Gramatica() {
                 </div>
 
               </section>
-            }
+            )}
 
-            {tipoPronome === 'possessiveAdjectives' &&
+            {tipoPronome === 'possessiveAdjectives' && (
               <section className={`container-pronomes ${animar ? 'animate' : ''}`}>
 
                 <h2 className="tipePronouns">Possessive Adjectives</h2>
@@ -362,9 +350,9 @@ function Gramatica() {
 
 
               </section>
-            }
+            )}
 
-            {tipoPronome === 'possessivePronouns' &&
+            {tipoPronome === 'possessivePronouns' && (
               <section className={`container-pronomes ${animar ? 'animate' : ''}`}>
 
                 <h2 className="tipePronouns">Possessive Pronouns</h2>
@@ -412,8 +400,9 @@ function Gramatica() {
                 </div>
 
               </section>
-            }
-            {tipoPronome === 'reflexivePronouns' &&
+            )}
+
+            {tipoPronome === 'reflexivePronouns' && (
               <section className={`container-pronomes ${animar ? 'animate' : ''}`}>
 
                 <h2 className="tipePronouns">Reflexive Pronouns</h2>
@@ -461,8 +450,9 @@ function Gramatica() {
                 </div>
 
               </section>
-            }
-            {tipoPronome === 'demonstrativePronouns' &&
+            )}
+
+            {tipoPronome === 'demonstrativePronouns' && (
               <section className={`container-pronomes ${animar ? 'animate' : ''}`}>
 
                 <h2 className="tipePronouns">Demonstrative Pronouns</h2>
@@ -498,8 +488,9 @@ function Gramatica() {
                 </div>
 
               </section>
-            }
-            {tipoPronome === 'interrogativePronouns' &&
+            )}
+
+            {tipoPronome === 'interrogativePronouns' && (
               <section className={`container-pronomes ${animar ? 'animate' : ''}`}>
 
                 <h2 className="tipePronouns">Interrogative Pronouns</h2>
@@ -534,13 +525,162 @@ function Gramatica() {
                 </div>
 
               </section>
-              
-            }
-
-            
+            )}
           </>
-        }
+        )}
+
+
+        {secaoAtiva === 'modalVerbs' && (
+          <>
+
+            <section className={`button-modal ${animar ? 'animate' : ''}`}>
+              <ul>
+                <li><button onClick={() => (setTipoModal('afirmativa'))}>Afirmativa</button></li>
+                <li><button onClick={() => (setTipoModal('interrogativa'))}>Interrogativa</button></li>
+                <li><button onClick={() => (setTipoModal('negativa'))}>Negativa</button></li>
+              </ul>
+            </section>
+
+            {tipoModal === 'afirmativa' && (
+              <section className={`container-modal ${animar ? 'animate' : ''}`}>
+                <h2 className="tipeModal">Modal Verbs — Afirmative</h2>
+                <div className="container-content-modal">
+                  <div className="modal1">
+                    <h4>CAN</h4>
+                    <h4>COULD</h4>
+                    <h4>MAY</h4>
+                    <h4>MIGHT</h4>
+                    <h4>MUST</h4>
+                    <h4>SHALL</h4>
+                    <h4>SHOULD</h4>
+                    <h4>WILL</h4>
+                    <h4>WOULD</h4>
+                  </div>
+                  <div className="modal2">
+                    <h4>Habilidade, permissão, possibilidade</h4>
+                    <h4>Habilidade no passado, possibilidade, pedidos educados</h4>
+                    <h4>Permissão formal, possibilidade</h4>
+                    <h4>Possibilidade menor que “may”</h4>
+                    <h4>Obrigação, dedução lógica</h4>
+                    <h4>Oferta, sugestão, futuro formal</h4>
+                    <h4>Conselho, recomendação</h4>
+                    <h4>Futuro, decisão no momento</h4>
+                    <h4>Hipótese, pedido educado, hábito passado</h4>
+                  </div>
+                  <div className="modal3">
+                    <h4>I <strong>can</strong> swim very well.</h4>
+                    <h4>When I was young, I <strong>could</strong> run fast.</h4>
+                    <h4>You <strong>may</strong> start your test now.</h4>
+                    <h4>It <strong>might</strong> rain later today.</h4>
+                    <h4>You <strong>must</strong> wear a helmet.</h4>
+                    <h4>We <strong>shall</strong> meet again soon.</h4>
+                    <h4>You <strong>should</strong> eat more vegetables.</h4>
+                    <h4>I <strong>will</strong> help you with that.</h4>
+                    <h4>I <strong>would</strong> travel more if I had money.</h4>
+                  </div>
+                </div>
+              </section>
+            )}
+
+            {tipoModal === 'interrogativa' && (
+              <section className={`container-modal ${animar ? 'animate' : ''}`}>
+                <h2 className="tipeModal">Modal Verbs — Interrogative</h2>
+                <div className="container-content-modal">
+                  <div className="modal1">
+                    <h4>CAN</h4>
+                    <h4>COULD</h4>
+                    <h4>MAY</h4>
+                    <h4>MIGHT</h4>
+                    <h4>MUST</h4>
+                    <h4>SHALL</h4>
+                    <h4>SHOULD</h4>
+                    <h4>WILL</h4>
+                    <h4>WOULD</h4>
+                  </div>
+
+                  <div className="modal2">
+                    <h4>Pedido, habilidade, permissão</h4>
+                    <h4>Pedido educado, sugestão, possibilidade</h4>
+                    <h4>Permissão formal</h4>
+                    <h4>Dúvida, possibilidade remota</h4>
+                    <h4>Dedução, obrigação</h4>
+                    <h4>Oferta, sugestão</h4>
+                    <h4>Conselho, dúvida</h4>
+                    <h4>Previsão, decisão</h4>
+                    <h4>Hipótese, pedido educado</h4>
+                  </div>
+
+                  <div className="modal3">
+                    <h4><strong>Can</strong> you help me?</h4>
+                    <h4><strong>Could</strong> you open the window, please?</h4>
+                    <h4><strong>May</strong> I sit here?</h4>
+                    <h4><strong>Might</strong> I ask you a question?</h4>
+                    <h4><strong>Must</strong> we finish this today?</h4>
+                    <h4><strong>Shall</strong> we dance?</h4>
+                    <h4><strong>Should</strong> I call her now?</h4>
+                    <h4><strong>Will</strong> you come with me?</h4>
+                    <h4><strong>Would</strong> you like some coffee?</h4>
+                  </div>
+                </div>
+              </section>
+            )}
+
+            {tipoModal === 'negativa' && (
+              <section className={`container-modal ${animar ? 'animate' : ''}`}>
+                <h2 className="tipeModal">Modal Verbs — Negative</h2>
+                <div className="container-content-modal">
+                  <div className="modal1">
+                    <h4>CAN'T</h4>
+                    <h4>COULDN'T</h4>
+                    <h4>MAY NOT</h4>
+                    <h4>MIGHT NOT</h4>
+                    <h4>MUSTN'T</h4>
+                    <h4>SHAN'T</h4>
+                    <h4>SHOULDN'T</h4>
+                    <h4>WON'T</h4>
+                    <h4>WOULDN'T</h4>
+                  </div>
+
+                  <div className="modal2">
+                    <h4>Incapacidade, proibição</h4>
+                    <h4>Incapacidade passada, impossibilidade</h4>
+                    <h4>Negação de permissão ou possibilidade</h4>
+                    <h4>Possibilidade remota negativa</h4>
+                    <h4>Proibição forte, dedução negativa</h4>
+                    <h4>Forma negativa de “shall” (pouco usada)</h4>
+                    <h4>Conselho negativo, recomendação contrária</h4>
+                    <h4>Negativa do futuro</h4>
+                    <h4>Negativa de hipótese, recusa educada</h4>
+                  </div>
+
+                  <div className="modal3">
+                    <h4>I <strong>can’t</strong> swim today.</h4>
+                    <h4>When I was a kid, I <strong>couldn’t</strong> drive.</h4>
+                    <h4>You <strong>may not</strong> enter this area.</h4>
+                    <h4>It <strong>might not</strong> rain after all.</h4>
+                    <h4>You <strong>mustn’t</strong> smoke here.</h4>
+                    <h4>We <strong>shan’t</strong> be late again.</h4>
+                    <h4>You <strong>shouldn’t</strong> eat too much sugar.</h4>
+                    <h4>I <strong>won’t</strong> tell anyone your secret.</h4>
+                    <h4>I <strong>wouldn’t</strong> do that if I were you.</h4>
+                  </div>
+                </div>
+              </section>
+            )}
+
+
+
+
+          </>
+
+        )}
+
+
+
       </main>
+
+
+
       <footer></footer>
     </>
   );

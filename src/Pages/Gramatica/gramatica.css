@@ -10,7 +10,6 @@
 
 main {
     height: 100vh;
-    /* garante que o body ocupe toda a altura */
     width: 100vw;
 
 }
@@ -96,7 +95,7 @@ main {
     background-color: var(--cor-terciaria);
 }
 
-/* Divs que surgirao */
+/* Tempo Verbal */
 
 .container {
     height: 500px;
@@ -106,8 +105,6 @@ main {
     top: 150px;
 
 }
-
-
 
 .botoes-container {
     display: flex;
@@ -178,7 +175,7 @@ main {
 }
 
 
-.divPrincipal.animate {
+.divPrincipal.animate, .container-modal.animate {
     animation: showUp 0.8s ease;
 
 }
@@ -238,7 +235,7 @@ hr {
     margin: 10px 0 10px;
 }
 
-.button-pronomes {
+.button-pronomes, .button-modal {
     height: 200px;
     top: 100px;
 
@@ -248,11 +245,11 @@ hr {
 }
 
 
-.button-pronomes.animate {
+.button-pronomes.animate, .button-modal.animate{
     animation: pop 0.5s ease-in-out forwards;
 }
 
-.button-pronomes ul {
+.button-pronomes ul, .button-modal ul {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -261,7 +258,7 @@ hr {
    
 }
 
-.button-pronomes button {
+.button-pronomes button, .button-modal button {
     height: 50px;
     width: 150px;
     border-radius: 25px;
@@ -276,14 +273,14 @@ hr {
 
 }
 
-.button-pronomes button:hover {
+.button-pronomes button:hover, .button-modal button:hover {
     background-color: var(--cor-secundaria);
     transform: translateY(-2px) scale(1.05);
     transition: transform 0.3s ease-out;
     color: #FFF;
 }
 
-.container-pronomes {
+.container-pronomes, .container-modal {
     border: #000 solid 1px;
     border-radius: 20px;
     width: 700px;
@@ -319,12 +316,12 @@ hr {
 }
 
 
-.container-pronomes strong {
+.container-pronomes strong, .container-content-modal strong {
     color: var(--cor-secundaria);
     text-shadow: 0px 1px 3px #000;
 }
 
-.tipePronouns {
+.tipePronouns, .tipeModal {
     position: absolute;
     top: 15px;
     left: 15%;
@@ -333,7 +330,7 @@ hr {
     text-align: center;
 }
 
-.pronouns1 {
+.pronouns1{
     display: flex;
     flex-direction: column;
     padding: 30px 15px 10px 30px;
@@ -341,20 +338,20 @@ hr {
 
 }
 
-.pronouns2 {
+.pronouns2, .modal1 {
     display: flex;
     flex-direction: column;
     margin-right: 5px;
 
 }
 
-.pronouns3 {
+.pronouns3, .modal2 {
     display: flex;
     flex-direction: column;
     margin-right: 20px;
 }
 
-.pronouns4 {
+.pronouns4, .modal3 {
     display: flex;
     flex-direction: column;
     margin-right: auto;
@@ -366,6 +363,50 @@ hr {
     padding: 30px 15px 30px 30px;
     gap: 20px;
 }
+
+
+/* Modal Verbs */
+
+.button-modal{
+    height: 150px;
+}
+
+.tipeModal{
+    left: 180px;
+}
+
+.container-modal{
+    width: 800px;
+    height: 300px;
+
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+.modal-line{
+    display: flex;
+    flex-direction: row;
+}
+
+.container-content-modal{
+    display: flex;
+    justify-content: center;
+
+    width: 100%;
+}
+
+.modal1{
+    margin: 0 10px 0 10px;
+    height: 100%;
+}
+
+.modal2{
+    margin: 0 10px 0 0;
+
+}
+
+
+
 
 
 
