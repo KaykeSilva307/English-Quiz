@@ -91,7 +91,8 @@ main {
 }
 
 .pronomes-btn,
-.modalVerbs-btn {
+.modalVerbs-btn,
+.numbers-btn {
     background-color: var(--cor-terciaria);
 }
 
@@ -175,7 +176,8 @@ main {
 }
 
 
-.divPrincipal.animate, .container-modal.animate {
+.subDivs.animate, 
+.container-modal.animate {
     animation: showUp 0.8s ease;
 
 }
@@ -235,7 +237,8 @@ hr {
     margin: 10px 0 10px;
 }
 
-.button-pronomes, .button-modal {
+.button-pronomes, 
+.button-modal{
     height: 200px;
     top: 100px;
 
@@ -245,11 +248,14 @@ hr {
 }
 
 
-.button-pronomes.animate, .button-modal.animate{
+.button-pronomes.animate, 
+.button-modal.animate, 
+.button-numbers.animate{
     animation: pop 0.5s ease-in-out forwards;
 }
 
-.button-pronomes ul, .button-modal ul {
+.button-pronomes ul, 
+.button-modal ul {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -258,7 +264,9 @@ hr {
    
 }
 
-.button-pronomes button, .button-modal button {
+.button-pronomes button, 
+.button-modal button, 
+.button-numbers button {
     height: 50px;
     width: 150px;
     border-radius: 25px;
@@ -273,14 +281,17 @@ hr {
 
 }
 
-.button-pronomes button:hover, .button-modal button:hover {
+.button-pronomes button:hover, 
+.button-modal button:hover, 
+.button-numbers button:hover {
     background-color: var(--cor-secundaria);
     transform: translateY(-2px) scale(1.05);
     transition: transform 0.3s ease-out;
     color: #FFF;
 }
 
-.container-pronomes, .container-modal {
+.container-pronomes, 
+.container-modal {
     border: #000 solid 1px;
     border-radius: 20px;
     width: 700px;
@@ -300,7 +311,8 @@ hr {
 
 }
 
-.container-pronomes.animate {
+.container-pronomes.animate, 
+.container-numbers.animate {
     animation: showUp 0.6s ease;
 }
 
@@ -316,12 +328,14 @@ hr {
 }
 
 
-.container-pronomes strong, .container-content-modal strong {
+.container-pronomes strong, 
+.container-content-modal strong {
     color: var(--cor-secundaria);
     text-shadow: 0px 1px 3px #000;
 }
 
-.tipePronouns, .tipeModal {
+.tipePronouns, 
+.tipeModal {
     position: absolute;
     top: 15px;
     left: 15%;
@@ -338,20 +352,23 @@ hr {
 
 }
 
-.pronouns2, .modal1 {
+.pronouns2, 
+.modal1 {
     display: flex;
     flex-direction: column;
     margin-right: 5px;
 
 }
 
-.pronouns3, .modal2 {
+.pronouns3, 
+.modal2 {
     display: flex;
     flex-direction: column;
     margin-right: 20px;
 }
 
-.pronouns4, .modal3 {
+.pronouns4, 
+.modal3{
     display: flex;
     flex-direction: column;
     margin-right: auto;
@@ -367,7 +384,7 @@ hr {
 
 /* Modal Verbs */
 
-.button-modal{
+.button-modal, .button-numbers{
     height: 150px;
 }
 
@@ -405,7 +422,62 @@ hr {
 
 }
 
+/* Number (Cardinal and Ordinal)  =======================================================*/
+.button-numbers {
+    width: 300px;
+    height: 50px;
+    margin: 0 auto;
+    top: 150px;
+}
 
+.button-numbers ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.container-numbers{
+    display: flex;
+    flex-direction: column;
+    border: #000 1px solid;
+    border-radius: 20px;
+    background-color: #fefefe80;
+
+    width: 900px;
+    height: 300px;
+
+    margin: 0 auto 100px;
+    gap: 0;
+    top: 200px;
+    
+}
+.container-content-numbers{
+    display: flex;
+    width: 100%;
+    height: 100%;
+
+    
+}
+.tipeNumebers{
+    margin-top: 20px;
+    
+}
+
+.cardinal1, .cardinal2, .cardinal3, .cardinal4{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    width: 100%;
+    padding: 10px 0 20px;
+}
+
+.cardinal4{
+    padding-right: 20px;
+}
 
 
 

@@ -6,6 +6,7 @@ function Gramatica() {
   const [tempoSelecionado, setTempoSelecionado] = useState("presente");
   const [tipoPronome, setTipoPronome] = useState('subjectPronouns')
   const [tipoModal, setTipoModal] = useState("afirmativa")
+  const [tipoNumber, setTipoNumber] = useState('cardinal')
 
   const [secaoAtiva, setSecaoAtiva] = useState(null);
 
@@ -149,7 +150,7 @@ function Gramatica() {
               <li><button className="tempoVerbal-btn" onClick={() => { setSecaoAtiva("tempoVerbal"); setAnimar(true) }}>Tempo Verbal</button></li>
               <li><button className="pronomes-btn" onClick={() => { setSecaoAtiva("pronomes"); setAnimar(true) }}>Pronomes</button></li>
               <li><button className="modalVerbs-btn" onClick={() => { setSecaoAtiva("modalVerbs"); setAnimar(true) }}>Modal Verbs</button></li>
-
+              <li><button className="numbers-btn" onClick={() => { setSecaoAtiva('numbers'); setAnimar(true) }}>Numbers</button></li>
             </ul>
           </div>
         </section>
@@ -165,7 +166,7 @@ function Gramatica() {
                   <button className="simplePast-btn" onClick={() => setTempoSelecionado("passado")}>Simple Past</button>
                   <button className="presentContinuous-btn" onClick={() => setTempoSelecionado("continuo")}>Present Continuous</button>
                   <button className="simplePresent-btn" onClick={() => setTempoSelecionado("presente")}>Simple Present</button>
-                  <button className="simpleFuture-btn"onClick={() => setTempoSelecionado("futuro")}>Simple Future</button>
+                  <button className="simpleFuture-btn" onClick={() => setTempoSelecionado("futuro")}>Simple Future</button>
                 </div>
 
                 {/* Div que muda o conteúdo */}
@@ -173,8 +174,8 @@ function Gramatica() {
                   <strong>{temposVerbais[tempoSelecionado].tempoVerbal}</strong>
                 </div>
 
-                <div className={`divPrincipal ${animar ? 'animate' : ''}`}>
-                  <div className="subDivs">
+                <div className="divPrincipal">
+                  <div className={`subDivs ${animar ? 'animate' : ''}`}>
                     {temposVerbais[tempoSelecionado].colunas.map((coluna, index) => (
                       <div key={index} className="coluna">
                         <div className="titulo">{coluna.titulo}</div>
@@ -532,7 +533,6 @@ function Gramatica() {
 
         {secaoAtiva === 'modalVerbs' && (
           <>
-
             <section className={`button-modal ${animar ? 'animate' : ''}`}>
               <ul>
                 <li><button onClick={() => (setTipoModal('afirmativa'))}>Afirmativa</button></li>
@@ -675,6 +675,81 @@ function Gramatica() {
 
         )}
 
+        {secaoAtiva === 'numbers' && (
+          <>
+            <section className={`button-numbers ${animar ? 'animate' : ''}`}>
+              <ul>
+                <li><button onClick={() => setTipoNumber("cardinal")}>Cardinal Numbers</button></li>
+                <li><button onClick={() => setTipoNumber("ordinal")}>Ordinal Numbers</button></li>
+              </ul>
+            </section>
+            {tipoNumber === 'cardinal' && (
+              <section className={`container-numbers ${animar ? 'animate' : ''}`}>
+                <h2 className="tipeNumebers">Cardinal Numbers</h2>
+
+                <div className="container-content-numbers">
+                  <div className="cardinal1">
+                    <h4>1 – One</h4>
+                    <h4>2 – Two</h4>
+                    <h4>3 – Three</h4>
+                    <h4>4 – Four</h4>
+                    <h4>5 – Five</h4>
+                    <h4>6 – Six</h4>
+                    <h4>7 – Seven</h4>
+                    <h4>8 – Eight</h4>
+                    <h4>9 – Nine</h4>
+                    <h4>10 – Ten</h4>
+                  </div>
+
+                  {/* 11–19 */}
+                  <div className="cardinal2">
+                    <h4>11 – Eleven</h4>
+                    <h4>12 – Twelve</h4>
+                    <h4>13 – Thirteen</h4>
+                    <h4>14 – Fourteen</h4>
+                    <h4>15 – Fifteen</h4>
+                    <h4>16 – Sixteen</h4>
+                    <h4>17 – Seventeen</h4>
+                    <h4>18 – Eighteen</h4>
+                    <h4>19 – Nineteen</h4>
+                  </div>
+
+                  {/* 20–29 */}
+                  <div className="cardinal3">
+                    <h4>20 – Twenty</h4>
+                    <h4>21 – Twenty-one</h4>
+                    <h4>22 – Twenty-two</h4>
+                    <h4>23 – Twenty-three</h4>
+                    <h4>24 – Twenty-four</h4>
+                    <h4>25 – Twenty-five</h4>
+                    <h4>26 – Twenty-six</h4>
+                    <h4>27 – Twenty-seven</h4>
+                    <h4>28 – Twenty-eight</h4>
+                    <h4>29 – Twenty-nine</h4>
+                  </div>
+
+                  {/* 30–100+ */}
+                  <div className="cardinal4">
+                    <h4>30 – Thirty</h4>
+                    <h4>31 – Thirty-one</h4>
+                    <h4>40 – Forty</h4>
+                    <h4>50 – Fifty</h4>
+                    <h4>60 – Sixty</h4>
+                    <h4>70 – Seventy</h4>
+                    <h4>80 – Eighty</h4>
+                    <h4>90 – Ninety</h4>
+                    <h4>100 – A/One Hundred</h4>
+                    <h4>1,000 – A/One Thousand</h4>
+                    <h4>1,000,000 – A/One Million</h4>
+                  </div>
+                </div>
+              </section>
+            )}
+
+
+          </>
+
+        )}
 
 
       </main>
