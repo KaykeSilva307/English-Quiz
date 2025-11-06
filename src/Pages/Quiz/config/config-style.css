@@ -1,0 +1,100 @@
+:root {
+    --cor-principal: #2f3132;
+    --cor-secundaria: #d8a15b;
+    --cor-terciaria: #e3b67a;
+    --cor-texto: #333;
+    --cor-fundo: #8c8e8f;
+    --cor-fundo-div: #f0f0f0de;
+}
+
+
+
+.config-div {
+  border: #2f3132 2px solid;
+  background-color: var(--cor-fundo-div);
+  border-radius: 20px;
+
+  margin: 100px auto 0;
+  width: 500px;
+  height: 400px;
+
+  gap: 10px;
+  padding: 0 50px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+/* Colunas dos botoes (1)*/
+
+.TempoVerbal-div,
+.Pronome-div,
+.ModalVerbs-div,
+.Numbers-div {
+
+  width: 80%;
+  height: 15%;
+
+
+  display: flex;
+  align-items: center;
+
+
+}
+
+/* Cada botao da coluna (1) */
+.TempoVerbal-div button,
+.Pronome-div button,
+.ModalVerbs-div button,
+.Numbers-div button {
+  width: 100%;
+  height: 90%;
+
+  border: #000 1px solid;
+  box-shadow: 0px 3px 8px var(--cor-principal);
+  border-radius: 25px;
+}
+
+/* Coluna das opçoes (2) */
+.TempoVerbal-content,
+.Pronome-content,
+.ModalVerbs-content,
+.Numbers-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  height: 80%;
+  width: 100%;
+  gap: 5px;
+}
+
+.ChoseTitle {
+  margin: 5% 0 5%;
+}
+
+/* Cada botao da coluna (2) */
+.Options, .Options1 {
+  background-color: var(--cor-terciaria);
+  border: #000 1px solid;
+  box-shadow: 0px 3px 8px var(--cor-principal);
+  width: 200px;
+  height: 50px;
+  border-radius: 25px;
+}
+
+.Options1{
+  background-color: var(--cor-secundaria);
+}
+
+button:hover{
+  cursor: pointer;
+}
+
+.BackButton {
+  border-radius: 25px;
+  width: 70px;
+  background-color: #818181;
+  height: 50px;
+}
