@@ -445,7 +445,7 @@ hr {
     border-radius: 20px;
     background-color: #fefefe80;
 
-    width: 900px;
+    width: 800px;
     height: 300px;
 
     margin: 0 auto 100px;
@@ -464,22 +464,26 @@ hr {
     margin-top: 20px;
     
 }
-
 .cardinal1, .cardinal2, .cardinal3, .cardinal4{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 2px;
-    width: 100%;
-    padding: 10px 0 20px;
+    
 }
 
+.cardinal1{
+    width: 50%;
+} 
+.cardinal2{
+    width: 50%;
+}
+.cardinal3{
+    width: 50%;
+} 
 .cardinal4{
-    padding-right: 20px;
+    width: 70%;
 }
-
-
 
 
 /* Animaçoes */

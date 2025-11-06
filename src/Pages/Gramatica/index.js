@@ -712,11 +712,11 @@ function Gramatica() {
                     <h4>17 – Seventeen</h4>
                     <h4>18 – Eighteen</h4>
                     <h4>19 – Nineteen</h4>
+                    <h4>20 – Twenty</h4>
                   </div>
 
                   {/* 20–29 */}
                   <div className="cardinal3">
-                    <h4>20 – Twenty</h4>
                     <h4>21 – Twenty-one</h4>
                     <h4>22 – Twenty-two</h4>
                     <h4>23 – Twenty-three</h4>
@@ -726,11 +726,12 @@ function Gramatica() {
                     <h4>27 – Twenty-seven</h4>
                     <h4>28 – Twenty-eight</h4>
                     <h4>29 – Twenty-nine</h4>
+                    <h4>30 – Thirty</h4>
                   </div>
 
                   {/* 30–100+ */}
                   <div className="cardinal4">
-                    <h4>30 – Thirty</h4>
+
                     <h4>31 – Thirty-one</h4>
                     <h4>40 – Forty</h4>
                     <h4>50 – Fifty</h4>
@@ -741,6 +742,70 @@ function Gramatica() {
                     <h4>100 – A/One Hundred</h4>
                     <h4>1,000 – A/One Thousand</h4>
                     <h4>1,000,000 – A/One Million</h4>
+                  </div>
+                </div>
+              </section>
+            )}
+
+            {tipoNumber === 'ordinal' && (
+              <section className={`container-numbers ${animar ? 'animate' : ''}`}>
+                <h2 className="tipeNumebers">Ordinal Numbers</h2>
+
+                <div className="container-content-numbers">
+                  {/* 1st–10th */}
+                  <div className="cardinal1">
+                    <h4>1st – First</h4>
+                    <h4>2nd – Second</h4>
+                    <h4>3rd – Third</h4>
+                    <h4>4th – Fourth</h4>
+                    <h4>5th – Fifth</h4>
+                    <h4>6th – Sixth</h4>
+                    <h4>7th – Seventh</h4>
+                    <h4>8th – Eighth</h4>
+                    <h4>9th – Ninth</h4>
+                    <h4>10th – Tenth</h4>
+                  </div>
+
+                  {/* 11th–19th */}
+                  <div className="cardinal2">
+                    <h4>11th – Eleventh</h4>
+                    <h4>12th – Twelfth</h4>
+                    <h4>13th – Thirteenth</h4>
+                    <h4>14th – Fourteenth</h4>
+                    <h4>15th – Fifteenth</h4>
+                    <h4>16th – Sixteenth</h4>
+                    <h4>17th – Seventeenth</h4>
+                    <h4>18th – Eighteenth</h4>
+                    <h4>19th – Nineteenth</h4>
+                    <h4>20th – Twentieth</h4>
+                  </div>
+
+                  {/* 21st–29th */}
+                  <div className="cardinal3">
+                    <h4>21st – Twenty-first</h4>
+                    <h4>22nd – Twenty-second</h4>
+                    <h4>23rd – Twenty-third</h4>
+                    <h4>24th – Twenty-fourth</h4>
+                    <h4>25th – Twenty-fifth</h4>
+                    <h4>26th – Twenty-sixth</h4>
+                    <h4>27th – Twenty-seventh</h4>
+                    <h4>28th – Twenty-eighth</h4>
+                    <h4>29th – Twenty-ninth</h4>
+                    <h4>30th – Thirtieth</h4>
+                  </div>
+
+                  {/* 31st–100th+ */}
+                  <div className="cardinal4">
+                    <h4>31st – Thirty-first</h4>
+                    <h4>40th – Fortieth</h4>
+                    <h4>50th – Fiftieth</h4>
+                    <h4>60th – Sixtieth</h4>
+                    <h4>70th – Seventieth</h4>
+                    <h4>80th – Eightieth</h4>
+                    <h4>90th – Ninetieth</h4>
+                    <h4>100th – Hundredth</h4>
+                    <h4>1,000th – Thousandth</h4>
+                    <h4>1,000,000th – Millionth</h4>
                   </div>
                 </div>
               </section>
