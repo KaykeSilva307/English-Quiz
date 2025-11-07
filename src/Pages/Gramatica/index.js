@@ -530,7 +530,6 @@ function Gramatica() {
           </>
         )}
 
-
         {secaoAtiva === 'modalVerbs' && (
           <>
             <section className={`button-modal ${animar ? 'animate' : ''}`}>
