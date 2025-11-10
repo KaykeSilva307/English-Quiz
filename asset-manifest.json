@@ -1,16 +1,15 @@
 {
   "files": {
-    "main.css": "/English-Quiz/static/css/main.5e6d8be3.css",
-    "main.js": "/English-Quiz/static/js/main.71530193.js",
+    "main.css": "/English-Quiz/static/css/main.54f4b7d9.css",
+    "main.js": "/English-Quiz/static/js/main.814e0a54.js",
     "static/media/Kayke.jpg": "/English-Quiz/static/media/Kayke.ed5f70bed44aea73597d.jpg",
-    "static/media/AnnaClara.jpg": "/English-Quiz/static/media/AnnaClara.1553d72d89d1f5850ea2.jpg",
     "static/media/Gabriel.jpg": "/English-Quiz/static/media/Gabriel.b511b7d052f772c498f7.jpg",
     "index.html": "/English-Quiz/index.html",
-    "main.5e6d8be3.css.map": "/English-Quiz/static/css/main.5e6d8be3.css.map",
-    "main.71530193.js.map": "/English-Quiz/static/js/main.71530193.js.map"
+    "main.54f4b7d9.css.map": "/English-Quiz/static/css/main.54f4b7d9.css.map",
+    "main.814e0a54.js.map": "/English-Quiz/static/js/main.814e0a54.js.map"
   },
   "entrypoints": [
-    "static/css/main.5e6d8be3.css",
-    "static/js/main.71530193.js"
+    "static/css/main.54f4b7d9.css",
+    "static/js/main.814e0a54.js"
   ]
 }
