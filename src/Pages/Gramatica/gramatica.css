@@ -17,7 +17,7 @@ main {
 
 .boasvindas {
     margin: 30px auto 0;
-    width: 1200px;
+    width: 80%;
     font-size: 22px;
     font-weight: bold;
 
@@ -176,7 +176,7 @@ main {
 }
 
 
-.subDivs.animate, 
+.subDivs.animate,
 .container-modal.animate {
     animation: showUp 0.8s ease;
 
@@ -237,8 +237,8 @@ hr {
     margin: 10px 0 10px;
 }
 
-.button-pronomes, 
-.button-modal{
+.button-pronomes,
+.button-modal {
     height: 200px;
     top: 100px;
 
@@ -248,24 +248,24 @@ hr {
 }
 
 
-.button-pronomes.animate, 
-.button-modal.animate, 
-.button-numbers.animate{
+.button-pronomes.animate,
+.button-modal.animate,
+.button-numbers.animate {
     animation: pop 0.5s ease-in-out forwards;
 }
 
-.button-pronomes ul, 
+.button-pronomes ul,
 .button-modal ul {
     display: flex;
     flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
     gap: 20px;
-   
+
 }
 
-.button-pronomes button, 
-.button-modal button, 
+.button-pronomes button,
+.button-modal button,
 .button-numbers button {
     height: 50px;
     width: 150px;
@@ -281,8 +281,8 @@ hr {
 
 }
 
-.button-pronomes button:hover, 
-.button-modal button:hover, 
+.button-pronomes button:hover,
+.button-modal button:hover,
 .button-numbers button:hover {
     background-color: var(--cor-secundaria);
     transform: translateY(-2px) scale(1.05);
@@ -290,7 +290,7 @@ hr {
     color: #FFF;
 }
 
-.container-pronomes, 
+.container-pronomes,
 .container-modal {
     border: #000 solid 1px;
     border-radius: 20px;
@@ -311,7 +311,7 @@ hr {
 
 }
 
-.container-pronomes.animate, 
+.container-pronomes.animate,
 .container-numbers.animate {
     animation: showUp 0.6s ease;
 }
@@ -328,13 +328,13 @@ hr {
 }
 
 
-.container-pronomes strong, 
+.container-pronomes strong,
 .container-content-modal strong {
     color: var(--cor-secundaria);
     text-shadow: 0px 1px 3px #000;
 }
 
-.tipePronouns, 
+.tipePronouns,
 .tipeModal {
     position: absolute;
     top: 15px;
@@ -344,7 +344,7 @@ hr {
     text-align: center;
 }
 
-.pronouns1{
+.pronouns1 {
     display: flex;
     flex-direction: column;
     padding: 30px 15px 10px 30px;
@@ -352,7 +352,7 @@ hr {
 
 }
 
-.pronouns2, 
+.pronouns2,
 .modal1 {
     display: flex;
     flex-direction: column;
@@ -360,15 +360,15 @@ hr {
 
 }
 
-.pronouns3, 
+.pronouns3,
 .modal2 {
     display: flex;
     flex-direction: column;
     margin-right: 20px;
 }
 
-.pronouns4, 
-.modal3{
+.pronouns4,
+.modal3 {
     display: flex;
     flex-direction: column;
     margin-right: auto;
@@ -384,15 +384,16 @@ hr {
 
 /* Modal Verbs */
 
-.button-modal, .button-numbers{
+.button-modal,
+.button-numbers {
     height: 150px;
 }
 
-.tipeModal{
+.tipeModal {
     left: 180px;
 }
 
-.container-modal{
+.container-modal {
     width: 800px;
     height: 300px;
 
@@ -400,24 +401,24 @@ hr {
     padding: 0 10px;
 }
 
-.modal-line{
+.modal-line {
     display: flex;
     flex-direction: row;
 }
 
-.container-content-modal{
+.container-content-modal {
     display: flex;
     justify-content: center;
 
     width: 100%;
 }
 
-.modal1{
+.modal1 {
     margin: 0 10px 0 10px;
     height: 100%;
 }
 
-.modal2{
+.modal2 {
     margin: 0 10px 0 0;
 
 }
@@ -430,7 +431,7 @@ hr {
     top: 150px;
 }
 
-.button-numbers ul{
+.button-numbers ul {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -438,7 +439,7 @@ hr {
     gap: 50px;
 }
 
-.container-numbers{
+.container-numbers {
     display: flex;
     flex-direction: column;
     border: #000 1px solid;
@@ -451,37 +452,46 @@ hr {
     margin: 0 auto 100px;
     gap: 0;
     top: 200px;
-    
+
 }
-.container-content-numbers{
+
+.container-content-numbers {
     display: flex;
     width: 100%;
     height: 100%;
 
-    
+
 }
-.tipeNumebers{
+
+.tipeNumebers {
     margin-top: 20px;
-    
+
 }
-.cardinal1, .cardinal2, .cardinal3, .cardinal4{
+
+.cardinal1,
+.cardinal2,
+.cardinal3,
+.cardinal4 {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    
+
 }
 
-.cardinal1{
-    width: 50%;
-} 
-.cardinal2{
+.cardinal1 {
     width: 50%;
 }
-.cardinal3{
+
+.cardinal2 {
     width: 50%;
-} 
-.cardinal4{
+}
+
+.cardinal3 {
+    width: 50%;
+}
+
+.cardinal4 {
     width: 70%;
 }
 
@@ -517,6 +527,115 @@ hr {
     }
 }
 
-footer{
+footer {
     height: 100px;
+}
+
+@media (max-width: 1600px) {
+
+    /* PRONOMES */
+    .container-pronomes {
+        width: 850px;
+        height: 350px;
+    }
+
+    .tipePronouns {
+        left: 23%;
+    }
+
+    /* MODAL VERBS */
+    .container-modal {
+        height: 350px;
+    }
+
+    .container-content-modal {
+        margin-top: 20px;
+    }
+
+    /* Numbers */
+    .container-numbers {
+        width: 900px;
+        height: 350px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .subDivs {
+        width: 1000px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    /* TEMPO VERBAL */
+    .subContainer {
+        margin-top: 900px;
+    }
+
+    .botoes-container {
+        width: 500px;
+        flex-wrap: wrap;
+        margin: 0 auto;
+        gap: 20px;
+    }
+
+    .botoes-container button {
+        margin-bottom: 0px;
+    }
+
+    .tempoVerbal {
+        margin-top: 20px;
+    }
+
+    .subDivs {
+        flex-direction: column;
+        margin: 0 auto;
+        width: 1000px;
+        align-items: center;
+        gap: 0;
+    }
+
+    /* PRONOMES */
+    .button-pronomes {
+        width: 450px;
+        margin: 30px 0 100px;
+    }
+
+    .container-pronomes {
+        width: 450px;
+        height: 430px;
+    }
+
+    .Singular {
+        position: absolute;
+        transform: rotate(270deg);
+        top: 150px;
+        left: -25px;
+    }
+
+    .Plural {
+        position: absolute;
+        transform: rotate(270deg);
+        top: 270px;
+        left: -10px;
+    }
+    .tipePronouns{
+        left: -5px;
+    }
+    .pronouns2{
+        margin: 0 30px 0 50px;
+    }
+    .pronouns3{
+        margin-right: 50px;
+    }
+    .pronouns4{
+        display: none;
+    }
+    .SinPlr{
+        position: absolute;
+        transform: rotate(270deg);
+        left: -80px;
+    }
+
+    /* MODAL VERBS */
 }

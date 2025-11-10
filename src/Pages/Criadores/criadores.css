@@ -42,13 +42,6 @@ img{
     border-radius: 30px;
     max-height: 100%;
 }
-.anna{
-    border: 2px solid;
-    padding: 5% 2% 30%;
-    background-color: var(--cor-terciaria);
-    border-radius: 30px;
-    max-height: 100%;
-}
 .gabriel{
     border: 2px solid;
     padding: 5% 2% 30%;
@@ -81,9 +74,7 @@ img{
     .kayke{
         padding: 2% 1% 15%;
     }
-    .anna{
-        padding: 2% 1% 15%;
-    }
+
     .gabriel{
         padding: 2% 1% 15%;
     }
@@ -123,10 +114,7 @@ img{
         padding: 2% 1% 15%;
         flex: 1;
     }
-    .anna{
-        padding: 2% 1% 15%;
-        flex: 1;
-    }
+
     .gabriel{
         padding: 2% 1% 15%;
         flex: 1;
@@ -158,12 +146,6 @@ img{
     flex-direction: row;
     margin: 0 10%;
     padding: 10px 0;
-  }
-  .anna{
-    display: flex;
-    flex-direction: row;
-    padding: 10px 10px;
-    margin:0 10%;
   }
   .nome{
     display: flex;

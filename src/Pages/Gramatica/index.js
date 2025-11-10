@@ -215,8 +215,8 @@ function Gramatica() {
                 <h2 className="tipePronouns">Subject Pronouns</h2>
                 <div className="container-content">
                   <div className="pronouns1">
-                    <h2>Singular</h2>
-                    <h2>Plural</h2>
+                    <h2 className="Singular">Singular</h2>
+                    <h2 className="Plural">Plural</h2>
                   </div>
                   <div className="pronouns2">
                     <h4>1st person</h4>
@@ -261,8 +261,8 @@ function Gramatica() {
                 <h2 className="tipePronouns">Object Pronouns</h2>
                 <div className="container-content">
                   <div className="pronouns1">
-                    <h2>Singular</h2>
-                    <h2>Plural</h2>
+                    <h2 className="Singular">Singular</h2>
+                    <h2 className="Plural">Plural</h2>
                   </div>
                   <div className="pronouns2">
                     <h4>1st person</h4>
@@ -308,8 +308,8 @@ function Gramatica() {
                 <h2 className="tipePronouns">Possessive Adjectives</h2>
                 <div className="container-content">
                   <div className="pronouns1">
-                    <h2>Singular</h2>
-                    <h2>Plural</h2>
+                    <h2 className="Singular">Singular</h2>
+                    <h2 className="Plural">Plural</h2>
                   </div>
 
                   <div className="pronouns2">
@@ -359,8 +359,8 @@ function Gramatica() {
                 <h2 className="tipePronouns">Possessive Pronouns</h2>
                 <div className="container-content">
                   <div className="pronouns1">
-                    <h2>Singular</h2>
-                    <h2>Plural</h2>
+                    <h2 className="Singular">Singular</h2>
+                    <h2 className="Plural">Plural</h2>
                   </div>
 
                   <div className="pronouns2">
@@ -409,8 +409,8 @@ function Gramatica() {
                 <h2 className="tipePronouns">Reflexive Pronouns</h2>
                 <div className="container-content">
                   <div className="pronouns1">
-                    <h2>Singular</h2>
-                    <h2>Plural</h2>
+                    <h2 className="Singular">Singular</h2>
+                    <h2 className="Plural">Plural</h2>
                   </div>
 
                   <div className="pronouns2">
@@ -459,8 +459,8 @@ function Gramatica() {
                 <h2 className="tipePronouns">Demonstrative Pronouns</h2>
                 <div className="container-content">
                   <div className="pronouns1Demonstrative">
-                    <h2>Singular</h2>
-                    <h2>Plural</h2>
+                    <h2 className="Singular">Singular</h2>
+                    <h2 className="Plural">Plural</h2>
                   </div>
 
                   <div className="pronouns2">
@@ -497,7 +497,7 @@ function Gramatica() {
                 <h2 className="tipePronouns">Interrogative Pronouns</h2>
                 <div className="container-content">
                   <div className="pronouns1">
-                    <h2>Singular / Plural</h2>
+                    <h2 className="SinPlr">Singular / Plural</h2>
                   </div>
 
                   <div className="pronouns2">

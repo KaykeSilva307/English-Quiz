@@ -1,6 +1,5 @@
 import './criadores.css'
 import imgKayke from '../../Componentes/Pictures/Kayke.jpg';
-import imgAnna from '../../Componentes/Pictures/AnnaClara.jpg';
 import imgGabriel from '../../Componentes/Pictures/Gabriel.jpg';
 
 function Criadores() {
@@ -16,12 +15,6 @@ function Criadores() {
                             <p className='nome'>Kayke Silva</p>
                             <p className='matricula'>Matricula:</p>
                             <p className='matricula-nmr'>06013747</p>
-                        </div>
-                        <div className='anna'>
-                            <img src={imgAnna} alt="Foto de criador Anna Clara" />
-                            <p className='nome'>Anna Clara</p>
-                            <p className='matricula'>Matricula:</p>
-                            <p className='matricula-nmr'>06015283</p>
                         </div>
                         <div className='gabriel'>
                             <img src={imgGabriel} alt="Foto de criador Gabriel" />

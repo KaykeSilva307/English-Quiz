@@ -2,7 +2,7 @@ import { useState } from "react";
 import { configInicial } from "./configInicial";
 import './config-style.css'
 
-function Config() {
+function Config({ config, setConfig }) {
   const [animar, setAnimar] = useState(false)
   const [chose, setChose] = useState({
     all: true,
@@ -11,15 +11,15 @@ function Config() {
     modalVerbs: true,
     numbers: true,
   });
-  const [config, setConfig] = useState(configInicial);
 
-  // Função para alterar um valor dentro do objeto
+  
   function handleToggle(opcao) {
-    setConfig((prev) => ({
-      ...prev,            // mantém o resto igual
-      [opcao]: !prev[opcao], // inverte só o campo clicado
+    setConfig(prev => ({
+      ...prev,
+      [opcao]: !prev[opcao], // altera o estado do Quiz
     }));
   }
+
 
   return (
     <>
@@ -38,7 +38,7 @@ function Config() {
           )}
           {chose.tempoVerbal === false && (
             <>
-              <div className="TempoVerbal-content">
+              <div className={`TempoVerbal-content ${animar ? 'animate' : ''}`}>
                 <button className={`Options1 ${config.simplePast ? 'ativo' : ''}`} onClick={() => { handleToggle("simplePast"); setAnimar(true) }} >Simple Past</button>
                 <button className={`Options ${config.presentContinuous ? 'ativo' : ''}`} onClick={() => { handleToggle("presentContinuous"); setAnimar(true) }}>Present Continuous</button>
                 <button className={`Options ${config.simplePresent ? 'ativo' : ''}`} onClick={() => { handleToggle("simplePresent"); setAnimar(true) }}>Simple Present</button>

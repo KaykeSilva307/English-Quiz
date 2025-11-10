@@ -177,3 +177,9 @@ ul {
         transform: translateX(0%);
     }
 }
+
+@media (max-width: 480px){
+    section{
+        flex-direction: column;
+    }
+}
